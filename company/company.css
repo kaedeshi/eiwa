@@ -1,0 +1,700 @@
+@charset "utf-8";
+
+/*=======================================================================
+common
+=======================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/*=======================================================================
+mainvisual
+=======================================================================*/
+main .mainvisual {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  background-image: url(company.jpg);
+  background-size: cover;
+  background-position: center 70%;
+  overflow: hidden;
+}
+
+main .mainvisual .background {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: rgba(255, 255, 255, .5);
+}
+
+main .mainvisual .mainvisual-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 12px 60px;
+  text-align: center;
+  background: rgba(255, 255, 255, .7); 
+}
+
+main .mainvisual .mainvisual-text .pc-p,
+main .mainvisual .mainvisual-text .sp-p {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+/*=======================================================================
+header
+=======================================================================*/
+main .mainvisual header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 32px;
+  z-index: 5;
+}
+
+main .mainvisual header h1 {
+  font-size: 2.25rem;
+  line-height: 60px;
+  white-space: nowrap;
+  transition: all .3s;
+}
+
+main .mainvisual header h1.show {
+  color: #fff;
+}
+
+main .mainvisual header .header-menu ul {
+  display: flex;
+}
+
+main .mainvisual header .header-menu ul li {
+  width: 160px;
+  height: 48px;
+}
+
+main .mainvisual header .header-menu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+main .mainvisual header .header-menu ul li a:hover {
+  opacity: .6;
+  scale: 1.1;
+}
+
+main .mainvisual header .header-menu .header-service {
+  position: relative;
+}
+
+main .mainvisual header .header-menu .header-service::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  background: #000;
+  opacity: .6;
+}
+
+main .mainvisual header .header-menu .header-service::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  background: #000;
+  opacity: .6;
+}
+
+main .mainvisual header .header-menu .header-contact {
+  position: relative;
+}
+
+main .mainvisual header .header-menu .header-contact::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  background: #000;
+  opacity: .6;
+}
+
+main .mainvisual header #hamburger {
+  position: relative;
+  display: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+main .mainvisual header #hamburger #border1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 3px;
+  background: #111;
+  transition: all .3s;
+}
+
+main .mainvisual header #hamburger #border1.show {
+  transform: rotate(45deg) translate(-7px, 21px);
+  background: #fff;
+}
+
+main .mainvisual header #hamburger #border2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 3px;
+  background: #111;
+  transition: all .3s;
+}
+
+main .mainvisual header #hamburger #border2.show {
+  transform: rotate(-45deg) translate(-5px, -22px);
+  background: #fff;
+}
+
+main .mainvisual  #menu {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  z-index: 4;
+}
+
+main .mainvisual  #menu.show {
+  opacity: 1;
+}
+
+main .mainvisual  #menu ul li {
+  width: 100%;
+  padding: 24px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+main .mainvisual  #menu ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main .mainvisual #menu ul li a:hover {
+  opacity: .6;
+  scale: 1.1;
+}
+
+main .mainvisual #menu li:nth-child(1) {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all .3s;
+}
+
+main .mainvisual #menu.show li:nth-child(1) {
+  transform: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+main .mainvisual #menu li:nth-child(2) {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all .3s .1s;
+}
+
+main .mainvisual #menu.show li:nth-child(2) {
+  transform: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+main .mainvisual #menu li:nth-child(3) {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all .3s .2s;
+}
+
+main .mainvisual #menu.show li:nth-child(3) {
+  transform: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+main .mainvisual #menu li:nth-child(4) {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all .3s .3s;
+}
+
+main .mainvisual #menu.show li:nth-child(4) {
+  transform: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+main .mainvisual #mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .9);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  z-index: 3;
+}
+
+main .mainvisual #mask.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/*=======================================================================
+footer
+=======================================================================*/
+footer {
+  padding: 32px 0 16px;
+  border-top: 1px solid #111;
+  color: #ffffff;
+  background: #666666;
+}
+
+footer .footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+}
+
+footer .footer-main .footer-logo .footer-logo-name a {
+  font-size: 2.5rem;
+}
+
+footer .footer-main .footer-logo .tel {
+  font-size: 1.5rem;
+}
+
+footer .footer-main .footer-menu ul {
+  display: flex;
+  gap: 48px;
+}
+
+footer .footer-main .footer-menu ul li:hover {
+  opacity: .7;
+  scale: 1.1;
+}
+
+footer .footer-main .footer-menu ul li a {
+  position: relative;
+}
+
+footer .footer-main .footer-menu ul li a::before {
+  content: '▶︎';
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  transform: translateY(-50%);
+}
+
+footer .footer-copy {
+  text-align: center;
+  font-size: .85rem;
+  margin-top: 36px;
+}
+
+/*=======================================================================
+message
+=======================================================================*/
+main .comment {
+  padding: 80px 0 60px;
+}
+
+main .comment .comment-title {
+  position: relative;
+  width: min(100% - 122px, 1120px);
+  margin-inline: auto;
+}
+
+main .comment .comment-title img {
+  position: absolute;
+  bottom: 0;
+  left: -42.5px;
+  z-index: -2;
+}
+
+main .comment .comment-content {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+  margin-top: 32px;
+  padding: 60px 64px;
+  border: 1px solid #aaa;
+  box-shadow: 3px 3px 0 #ccc;
+}
+
+main .comment .comment-title h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+main .comment .comment-title p {
+  margin-top: -8px;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+main .comment .comment-content {
+  margin-top: 24px;
+}
+
+main .comment .comment-content .comment-text1 h3 {
+  font-size: 2.25rem;
+  color: #c85f48;
+}
+
+main .comment .comment-content .comment-text1 p {
+  font-size: 1.15rem;
+}
+
+main .comment .comment-content .comment-text1 p:nth-child(2) {
+  margin-top: 24px;
+}
+
+main .comment .comment-content .comment-text1 p:nth-child(3) {
+  margin-top: 16px;
+}
+
+main .comment .comment-content .comment-text2 {
+  margin-top: 24px;
+  text-align: end;
+}
+
+main .comment .comment-content .comment-text2 p:nth-child(2) {
+  font-size: 1.75rem;
+}
+
+
+/*=======================================================================
+company overview
+=======================================================================*/
+main .company {
+  position: relative;
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+
+main .company>img {
+  position: absolute;
+  top: -7%;
+  right: -15%;
+  width: 80%;
+  height: auto;
+  max-width: 900px;
+  max-height: 900px;
+}
+
+main .company .company-background {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: rgba(217, 217, 217, .3);
+  z-index: -3;
+}
+
+main .company .company-title {
+  position: relative;
+  width: min(100% - 122px, 1120px);
+  margin-inline: auto;
+}
+
+main .company .company-title img {
+  position: absolute;
+  bottom: 0;
+  left: -42.5px;
+  z-index: -2;
+}
+
+main .company .company-title h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+main .company .company-title p {
+  margin-top: -8px;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+main .company .company-content {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+  margin-top: 32px;
+  padding: 60px 64px;
+  border: 1px solid #aaa;
+  box-shadow: 3px 3px 0 #ccc;
+}
+
+main .company dl {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .company dl dt {
+  width: 30%;
+  padding: 28px;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #111;
+}
+
+main .company dl dd {
+  width: 70%;
+  padding: 28px;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #111;
+}
+
+/*=======================================================================
+access
+=======================================================================*/
+main .access .access-title {
+  position: relative;
+  width: min(100% - 122px, 1120px);
+  margin-inline: auto;
+}
+
+main .access .access-title img {
+  position: absolute;
+  bottom: 0;
+  left: -42.5px;
+  z-index: -2;
+}
+
+main .access .access-title h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+main .access .access-title p {
+  margin-top: -8px;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+}
+
+main .access {
+  padding: 60px 0;
+}
+
+main .access div {
+  width: min(100% - 32px, 1120px);
+  margin-top: 16px;
+  margin-inline: auto;
+}
+
+main .access div iframe {
+  width: 100%;
+}
+
+/*=======================================================================
+company ~contact~
+=======================================================================*/
+main .contact {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+  padding: 32px 0;
+}
+
+main .contact h3 {
+  text-align: center;
+}
+
+main .contact>p {
+  margin-top: 8px;
+  text-align: center;
+}
+
+main .contact .contact-content {
+  position: relative;
+  width: min(100% - 32px, 550px);
+  margin-top: 32px;
+  margin-inline: auto;
+  padding: 20px 0;
+  text-align: center;
+  color: #c85f48;
+  border: 1px solid #c85f48;
+  z-index: 2;
+}
+
+main .contact .contact-content::before {
+  content: '';
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-top: 30px solid #fff;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  z-index: 2;
+}
+
+main .contact .contact-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-top: 30px solid #c85f48;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+
+main .contact .contact-content p+p {
+  margin-top: 8px;
+}
+
+main .contact .contact-btn {
+  width: min(100% - 32px, 450px);
+  margin: 12px auto 0;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #c85f48;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+main .contact .contact-btn:hover {
+  opacity: .7;
+}
+
+main .contact .contact-btn a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 24px 0;
+}
+
+main .contact .contact-btn a::before {
+  content: url(mail-icon.png);
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+main .contact .contact-btn a::after {
+  content: '>';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+/*=======================================================================
+contact ~contact-top~
+=======================================================================*/
+main .contact-top {
+  position: relative;
+  height: 120px;
+  background: url(mainvisual-company.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+}
+
+main .contact-top h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  color: #fff;
+  font-size: 2.75rem;
+}
+
+
+/*=======================================================================
+media
+=======================================================================*/
+@media screen and (max-width:980px) {
+  main .mainvisual header .header-menu {
+    display: none;
+  }
+
+  main .mainvisual header #hamburger {
+    display: block;
+  }
+  
+  main .mainvisual header #mask {
+    display: block;
+  }
+}
+
+@media screen and (max-width:780px) {
+
+  footer .footer-main {
+    flex-direction: column-reverse;
+  }
+
+  footer .footer-main .footer-logo {
+    margin-top: 36px;
+  }
+}
+
+
