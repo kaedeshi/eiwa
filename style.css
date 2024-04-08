@@ -290,12 +290,23 @@ main .mainvisual .mainvisual-text {
   left: 36px;
   transform: translateY(-50%);
   color: #fff;
+  z-index: 2;
 }
 
 main .mainvisual .mainvisual-text .pc-p,
 main .mainvisual .mainvisual-text .sp-p {
   font-size: 4.25rem;
   white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: anime1 .6s .5s forwards;
+}
+
+@keyframes anime1 {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 main .mainvisual .mainvisual-text img {
@@ -306,10 +317,157 @@ main .mainvisual .mainvisual-text .sub-p {
   margin-top: 28px;
   font-size: 2.25rem;
   white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: anime2 .6s .7s forwards;
+}
+
+@keyframes anime2 {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 main .mainvisual .sp-p {
   display: none;
+}
+
+main .mainvisual .square1 {
+  position: absolute;
+  top: -300px;
+  right: 655px;
+  width: 360px;
+  height: 315px;
+  clip-path: polygon(
+    0 0,
+    52% 0,
+    100% 100%,
+    48% 100%
+  );
+  background: #1d52a9;
+  opacity: 0;
+  animation: anime3 2s .5s forwards;
+}
+
+@keyframes anime3 {
+  100% {
+    opacity: 1;
+  }
+}
+
+main .mainvisual .mainvisual-img1 {
+  position: absolute;
+  overflow: hidden;
+  top: 35px;
+  /* left: calc(57% - 208px); */
+  right: 494px;
+  width: 336px;
+  height: 280px;
+  clip-path: polygon(
+    0 0,
+    55% 0,
+    100% 100%,
+    45% 100%
+  );
+  background-image: url(mainvisual-img1.jpg);
+  background-repeat: no-repeat;
+  background-size: 290%;
+  background-position: 53% 60%;
+  opacity: 0;
+  transform: translateX(-200px);
+  animation: anime4 1s .7s forwards;
+}
+
+@keyframes anime4 {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main .mainvisual .mainvisual-img2 {
+  position: absolute;
+  overflow: hidden;
+  top: 335px;
+  /* left: calc(57% - 48px); */
+  right: 314px;
+  width: 355px;
+  height: 300px;
+  clip-path: polygon(
+    0 0,
+    52% 0,
+    100% 100%,
+    48% 100%
+  );
+  background-image: url(mainvisual-img2.jpeg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 73% 20%;
+  opacity: 0;
+  transform: translateY(200px);
+  animation: anime5 1s .8s forwards;
+}
+
+@keyframes anime5 {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main .mainvisual .mainvisual-img3 {
+  position: absolute;
+  overflow: hidden;
+  top: 35px;
+  /* left: 57%; */
+  right: -43px;
+  width: 660px;
+  height: 480px;
+  clip-path: polygon(
+    0 0,
+    60% 0,
+    100% 100%,
+    40% 100%
+  );
+  background-image: url(mainvisual-img3.jpg);
+  background-repeat: no-repeat;
+  background-size: 127%;
+  background-position: 10% 60%;
+  opacity: 0;
+  transform: translateX(200px);
+  animation: anime6 2s .9s forwards;
+}
+
+@keyframes anime6 {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+main .mainvisual .square2 {
+  position: absolute;
+  top: 535px;
+  /* left: calc(57% + 274px); */
+  right: -315px;
+  width: 660px;
+  height: 480px;
+  clip-path: polygon(
+    0 0,
+    60% 0,
+    100% 100%,
+    40% 100%
+  );
+  background: #1d52a9;
+  opacity: 0;
+  animation: anime7 2s .5s forwards;
+}
+
+@keyframes anime7 {
+  100% {
+    opacity: 1;
+  }
 }
 
 /*=======================================================================
@@ -536,6 +694,7 @@ main .service .service-supply>div>div div img {
   left: 50%;
   translate: -50% -50%;
   width: 70%;
+  height: auto;
 }
 
 main .service .service-supply>div>div p {
@@ -704,6 +863,7 @@ main .recruit .recruit-content {
 
 main .recruit .recruit-content .recruit-text p {
   font-size: 1.25rem;
+  letter-spacing: 2px;
 }
 
 main .recruit .recruit-content>div {
@@ -712,7 +872,7 @@ main .recruit .recruit-content>div {
 
 main .recruit .recruit-content .recruit-btn {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   width: 240px;
   margin-top: 32px;
   color: #fff;
@@ -801,6 +961,7 @@ main .contact .pc-contact {
   margin-top: 8px;
   text-align: center;
   font-size: 1.25rem;
+  letter-spacing: 2px;
 }
 
 main .contact .sp-contact {
@@ -808,6 +969,7 @@ main .contact .sp-contact {
   margin-top: 8px;
   text-align: center;
   font-size: 1.25rem;
+  letter-spacing: 2px;
 }
 
 main .contact .contact-content {
@@ -849,8 +1011,9 @@ main .contact .contact-content::after {
 }
 
 main .contact .contact-content p {
-  width: 330px;
+  width: min(100% - 40px, 400px);
   margin-inline: auto;
+  font-size: 1.25rem;
 }
 
 main .contact .contact-content p+p {
@@ -859,7 +1022,7 @@ main .contact .contact-content p+p {
 
 main .contact .contact-btn {
   width: min(100% - 40px, 450px);
-  margin: 12px auto 0;
+  margin: 32px auto 0;
   font-size: 1.5rem;
   color: #fff;
   background: #c85f48;
@@ -879,8 +1042,7 @@ main .contact .contact-btn a {
   padding: 24px 0;
 }
 
-main .contact .contact-btn a::before {
-  content: url(mail-icon.png);
+main .contact .contact-btn img {
   position: absolute;
   top: 55%;
   left: 5%;
