@@ -272,7 +272,7 @@ main .mainvisual {
   position: relative;
   width: 100vw;
   height: calc(300px - 72px);
-  background-image: url(contact.jpeg);
+  background-image: url(recruit.jpeg);
   background-size: cover;
   background-position: center 25%;
   overflow: hidden;
@@ -497,7 +497,7 @@ main .recruit-contact>div .recruit-entry div p:nth-child(2) {
   font-size: 1.25rem;
 }
 
-main .recruit-contact>div .recruit-entry div:has(a) {
+main .recruit-contact>div .recruit-entry .recruit-entry-btn {
   font-size: 1.5rem;
   color: #fff;
   background: #c85f48;
@@ -505,18 +505,18 @@ main .recruit-contact>div .recruit-entry div:has(a) {
   cursor: pointer;
 }
 
-main .recruit-contact>div .recruit-entry div:has(a):hover {
+main .recruit-contact>div .recruit-entry .recruit-entry-btn:hover {
   opacity: .7;
 }
 
-main .recruit-contact>div .recruit-entry div a {
+main .recruit-contact>div .recruit-entry .recruit-entry-btn a {
   position: relative;
   display: block;
   width: 100%;
   padding: 24px 0;
 }
 
-main .recruit-contact>div .recruit-entry div a::after {
+main .recruit-contact>div .recruit-entry .recruit-entry-btn a::after {
   content: '>';
   position: absolute;
   top: 50%;
@@ -684,7 +684,7 @@ media
     width: 100%;
   }
 
-  main .recruit-personal>div>div div:has(p) {
+  main .recruit-personal>div>div .recruit-personal-text {
     margin-top: 24px;
     text-align: center;
   }
@@ -699,7 +699,7 @@ media
     margin-inline: auto;
   }
 
-  main .recruit-contact>div .recruit-entry div:has(a) {
+  main .recruit-contact>div .recruit-entry .recruit-entry-btn {
     margin-top: 24px;
     max-width: 400px;
   }

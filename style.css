@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "myfont1";
+  src: url("font/GenEiChikugoMin3-R.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("font/GenEiGothicN-Regular.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont3";
+  src: url("font/GenEiGothicN-ExtraLigh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont4";
+  src: url("font/GenEiGothicN-Ligh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont5";
+  src: url("font/GenEiGothicN-SemiLight.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont6";
+  src: url("font/GenEiGothicN-Heavy.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont7";
+  src: url("font/GenEiGothicN-Bold.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont8";
+  src: url("font/GenEiGothicN-SemiBold.otf") format(opentype);
+}
+
 /*=======================================================================
 common
 =======================================================================*/
@@ -36,10 +76,12 @@ header {
   align-items: center;
   width: 100%;
   height: 72px;
-  padding: 0 36px;
+  padding: 0 20px;
 }
 
 header h1 {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
   line-height: 40px;
   white-space: nowrap;
@@ -48,7 +90,7 @@ header h1 {
 }
 
 header h1 span {
-  font-size: 2rem;
+  font-size: 1.875rem;
 }
 
 header h1.show {
@@ -60,8 +102,9 @@ header .header-menu ul {
 }
 
 header .header-menu ul li {
-  width: 160px;
-  height: 48px;
+  font-family: "myfont1";
+  width: 132px;
+  height: 32px;
 }
 
 header .header-menu ul li a {
@@ -90,7 +133,7 @@ header .header-menu .header-service::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -102,7 +145,7 @@ header .header-menu .header-service::after {
   right: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -118,7 +161,7 @@ header .header-menu .header-contact::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -170,8 +213,8 @@ header #menu {
   left: 50%;
   transform: translateX(-50%);
   width: 360px;
-  text-align: center;
   color: #fff;
+  text-align: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -183,6 +226,7 @@ header #menu.show {
 }
 
 header #menu ul li {
+  font-family: "myfont1";
   width: 100%;
   padding: 24px 0;
   text-align: center;
@@ -193,7 +237,7 @@ header #menu ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -290,6 +334,7 @@ main .mainvisual .mainvisual-text {
   left: 36px;
   transform: translateY(-50%);
   color: #fff;
+  font-family: "myfont1";
   z-index: 2;
 }
 
@@ -339,12 +384,10 @@ main .mainvisual .square1 {
   right: 655px;
   width: 360px;
   height: 315px;
-  clip-path: polygon(
-    0 0,
-    52% 0,
-    100% 100%,
-    48% 100%
-  );
+  clip-path: polygon(0 0,
+      52% 0,
+      100% 100%,
+      48% 100%);
   background: #1d52a9;
   opacity: 0;
   animation: anime3 2s .5s forwards;
@@ -364,12 +407,10 @@ main .mainvisual .mainvisual-img1 {
   right: 494px;
   width: 336px;
   height: 280px;
-  clip-path: polygon(
-    0 0,
-    55% 0,
-    100% 100%,
-    45% 100%
-  );
+  clip-path: polygon(0 0,
+      55% 0,
+      100% 100%,
+      45% 100%);
   background-image: url(mainvisual-img1.jpg);
   background-repeat: no-repeat;
   background-size: 290%;
@@ -394,12 +435,10 @@ main .mainvisual .mainvisual-img2 {
   right: 314px;
   width: 355px;
   height: 300px;
-  clip-path: polygon(
-    0 0,
-    52% 0,
-    100% 100%,
-    48% 100%
-  );
+  clip-path: polygon(0 0,
+      52% 0,
+      100% 100%,
+      48% 100%);
   background-image: url(mainvisual-img2.jpeg);
   background-repeat: no-repeat;
   background-size: 200%;
@@ -424,12 +463,10 @@ main .mainvisual .mainvisual-img3 {
   right: -43px;
   width: 660px;
   height: 480px;
-  clip-path: polygon(
-    0 0,
-    60% 0,
-    100% 100%,
-    40% 100%
-  );
+  clip-path: polygon(0 0,
+      60% 0,
+      100% 100%,
+      40% 100%);
   background-image: url(mainvisual-img3.jpg);
   background-repeat: no-repeat;
   background-size: 127%;
@@ -453,12 +490,10 @@ main .mainvisual .square2 {
   right: -315px;
   width: 660px;
   height: 480px;
-  clip-path: polygon(
-    0 0,
-    60% 0,
-    100% 100%,
-    40% 100%
-  );
+  clip-path: polygon(0 0,
+      60% 0,
+      100% 100%,
+      40% 100%);
   background: #1d52a9;
   opacity: 0;
   animation: anime7 2s .5s forwards;
@@ -491,13 +526,14 @@ main .about .about-title img {
 }
 
 main .about .about-title h2 {
+  font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .about .about-title p {
-  margin-top: -8px;
+  margin-top: -4px;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -515,10 +551,12 @@ main .about .about-main>div {
 
 main .about .about-main .about-content h3 {
   font-size: 2.25rem;
+  font-family: "myfont1";
 }
 
 main .about .about-main .about-content .about-text {
   margin-top: 32px;
+  font-family: "myfont2";
 }
 
 main .about .about-main .about-content .about-text p {
@@ -535,6 +573,7 @@ main .about .about-content .about-btn {
   width: 240px;
   margin-top: 32px;
   color: #fff;
+  font-family: "myfont1";
   background: #c85f48;
   text-align: center;
   cursor: pointer;
@@ -562,7 +601,7 @@ main .about .about-content .about-btn:active {
 main .about .about-content .about-btn a {
   display: block;
   width: 100%;
-  padding: 15px 0;
+  padding: 19.5px 0;
 }
 
 main .about .about-content .about-btn .about-btn-shadow {
@@ -577,8 +616,7 @@ main .about .about-content .about-btn .about-btn-shadow {
 }
 
 main .about .about-content .about-btn:active .about-btn-shadow {
-  transform: translate(-2px 
-  , -2px);
+  transform: translate(-2px, -2px);
 }
 
 main .about .about-main .about-img img {
@@ -614,13 +652,14 @@ main .service .service-title img {
 }
 
 main .service .service-title h2 {
+  font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .service .service-title p {
-  margin-top: -8px;
+  margin-top: -4px;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -639,9 +678,11 @@ main .service .service-main>div {
 
 main .service .service-main .service-content h3 {
   font-size: 2.25rem;
+  font-family: "myfont1";
 }
 
 main .service .service-main .service-content .service-text {
+  font-family: "myfont2";
   margin-top: 32px;
 }
 
@@ -665,6 +706,7 @@ main .service .service-supply {
 }
 
 main .service .service-supply>p {
+  font-family: "myfont1";
   font-size: 2rem;
   color: #c85f48;
 }
@@ -677,6 +719,7 @@ main .service .service-supply>div {
 
 main .service .service-supply>div>div {
   width: calc((100% - 72px) / 4);
+  font-family: "myfont2";
 }
 
 main .service .service-supply>div>div div {
@@ -710,6 +753,7 @@ main .service .service-example {
 }
 
 main .service .service-example>p {
+  font-family: "myfont1";
   font-size: 2rem;
   color: #c85f48;
 }
@@ -756,6 +800,7 @@ main .history .history-content {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
   text-align: center;
+  font-family: "myfont1";
   color: #fff;
 }
 
@@ -764,6 +809,7 @@ main .history .history-content .pc-since {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "myfont1";
   font-size: 15rem;
   white-space: nowrap;
   opacity: .1;
@@ -780,6 +826,7 @@ main .history .history-content .sp-since {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "myfont1";
   font-size: 15rem;
   white-space: nowrap;
   line-height: 1;
@@ -792,11 +839,11 @@ main .history .history-content .sp-since span {
 }
 
 main .history .history-title p:nth-child(1) {
- font-size: 2.5rem; 
+  font-size: 2.5rem;
 }
 
 main .history .history-title p:nth-child(2) {
- font-size: 1.5rem; 
+  font-size: 1.5rem;
 }
 
 main .history .history-text {
@@ -842,13 +889,14 @@ main .recruit .recruit-title img {
 }
 
 main .recruit .recruit-title h2 {
+  font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .recruit .recruit-title p {
-  margin-top: -8px;
+  margin-top: -4px;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -862,6 +910,7 @@ main .recruit .recruit-content {
 }
 
 main .recruit .recruit-content .recruit-text p {
+  font-family: "myfont2";
   font-size: 1.25rem;
   letter-spacing: 2px;
 }
@@ -876,6 +925,7 @@ main .recruit .recruit-content .recruit-btn {
   width: 240px;
   margin-top: 32px;
   color: #fff;
+  font-family: "myfont1";
   background: #c85f48;
   text-align: center;
   cursor: pointer;
@@ -903,7 +953,7 @@ main .recruit .recruit-content .recruit-btn:active {
 main .recruit .recruit-content .recruit-btn a {
   display: block;
   width: 100%;
-  padding: 15px 0;
+  padding: 19.5px 0;
 }
 
 main .recruit .recruit-content .recruit-btn .recruit-btn-shadow {
@@ -918,8 +968,7 @@ main .recruit .recruit-content .recruit-btn .recruit-btn-shadow {
 }
 
 main .recruit .recruit-content .recruit-btn:active .recruit-btn-shadow {
-  transform: translate(-2px 
-  , -2px);
+  transform: translate(-2px, -2px);
 }
 
 main .recruit .recruit-content div img {
@@ -947,19 +996,21 @@ main .contact .contact-title img {
 }
 
 main .contact .contact-title h2 {
+  font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .contact .contact-title p {
-  margin-top: -8px;
+  margin-top: -4px;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .contact .pc-contact {
   margin-top: 8px;
   text-align: center;
+  font-family: "myfont2";
   font-size: 1.25rem;
   letter-spacing: 2px;
 }
@@ -968,6 +1019,7 @@ main .contact .sp-contact {
   display: none;
   margin-top: 8px;
   text-align: center;
+  font-family: "myfont2";
   font-size: 1.25rem;
   letter-spacing: 2px;
 }
@@ -1013,6 +1065,7 @@ main .contact .contact-content::after {
 main .contact .contact-content p {
   width: min(100% - 40px, 400px);
   margin-inline: auto;
+  font-family: "Shippori Mincho", serif;
   font-size: 1.25rem;
 }
 
@@ -1023,6 +1076,7 @@ main .contact .contact-content p+p {
 main .contact .contact-btn {
   width: min(100% - 40px, 450px);
   margin: 32px auto 0;
+  font-family: "myfont1";
   font-size: 1.5rem;
   color: #fff;
   background: #c85f48;
@@ -1039,7 +1093,7 @@ main .contact .contact-btn a {
   position: relative;
   display: block;
   width: 100%;
-  padding: 24px 0;
+  padding: 27px 0;
 }
 
 main .contact .contact-btn img {
@@ -1063,17 +1117,18 @@ main .contact .contact-btn a::after {
 footer
 =======================================================================*/
 footer {
+  font-family: "myfont1";
   padding: 60px 0 16px;
   color: #ffffff;
   background: #104383;
 }
 
-footer .footer-main  {
+footer .footer-main {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
 }
 
-footer .footer-main .footer-menu  {
+footer .footer-main .footer-menu {
   position: relative;
   padding-bottom: 16px;
 }
@@ -1211,7 +1266,7 @@ media
   header #hamburger {
     display: block;
   }
-  
+
   header #mask {
     display: block;
   }
@@ -1221,6 +1276,7 @@ media
   main .about .about-main {
     flex-direction: column-reverse;
   }
+
   main .about .about-main>div {
     width: 100%;
   }
@@ -1245,7 +1301,7 @@ media
   main .service .service-main>div {
     width: 100%;
   }
-  
+
   main .service .service-main .service-content h3 {
     font-size: 2rem;
     text-align: center;
@@ -1294,7 +1350,7 @@ media
     flex-wrap: wrap;
     gap: 24px;
   }
-  
+
   main .service .service-supply>div>div {
     width: calc((100% - 24px) / 2);
   }
@@ -1305,11 +1361,11 @@ media
     flex-wrap: wrap;
     gap: 16px;
   }
-  
+
   main .service .service-example>div>div {
     width: 100%;
   }
-  
+
 }
 
 @media screen and (max-width:660px) {
@@ -1323,7 +1379,7 @@ media
   main .history .history-content .sp-since {
     font-size: 12rem;
   }
-  
+
   main .history .history-content .sp-since span {
     font-size: 7rem;
   }
@@ -1331,9 +1387,8 @@ media
   main .contact .pc-contact {
     display: none;
   }
-  
+
   main .contact .sp-contact {
     display: block;
   }
 }
-
