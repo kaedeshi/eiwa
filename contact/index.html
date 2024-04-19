@@ -77,7 +77,7 @@
           <div class="type">
             <label for="お問い合わせ種別" class="required">お問い合わせ種別</label>
             <select name="お問い合わせ種別" id="check1" required>
-              <option selected>-- お問い合わせ種別を選択してください --</option>
+              <option selected disabled>-- お問い合わせ種別を選択してください --</option>
               <option>商品内容について</option>
               <option>ご注文について</option>
               <option>採用について</option>
@@ -128,10 +128,8 @@
           </div>
         </div>
 
-        <div class="contact-btn" id="contact-btn">
-          <a href="#">送信</a>
-          <div class="contact-btn-shadow"></div>
-        </div>
+        <button type="submit" id="contact-btn" disabled>送信<div class="contact-btn-shadow"></div></button>
+        
       </form>
     </section>
   </main>

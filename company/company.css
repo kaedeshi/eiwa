@@ -349,7 +349,7 @@ main .mainvisual .mainvisual-text {
   height: 140px;
   width: min(100% - 90px, 450px);
   text-align: center;
-  background: rgba(255, 255, 255, .7); 
+  background: rgba(255, 255, 255, .7);
 }
 
 main .mainvisual .mainvisual-text div .main-p {
@@ -759,39 +759,39 @@ media
   header h1 span {
     font-size: 1rem;
   }
-  
+
   main .mainvisual .mainvisual-text {
     height: 80px;
     width: 200px;
   }
-  
+
   main .mainvisual .mainvisual-text div .main-p {
     font-size: 1.5rem;
   }
-  
+
   main .mainvisual .mainvisual-text div .sub-p {
     margin-top: 4px;
     font-size: .625rem;
   }
-  
+
   main .comment .comment-title {
     width: min(100% - 80px, 1120px);
   }
-  
+
   main .comment .comment-title img {
     left: -20px;
     width: 60px;
     height: 60px;
   }
-  
+
   main .comment .comment-content {
     margin-top: -32px;
   }
-  
+
   main .comment .comment-title h2 {
     font-size: 1.5rem;
   }
-  
+
   main .comment .comment-title p {
     margin-top: 0px;
     font-size: .625rem;
@@ -800,7 +800,7 @@ media
   main .comment .comment-content {
     margin-top: -60px;
   }
-  
+
   main .comment .comment-content .comment-text1 h3 {
     font-size: 1.25rem;
   }
@@ -809,42 +809,50 @@ media
     background-size: 100% 3rem;
     line-height: 3rem;
   }
-  
+
   main .comment .comment-content .comment-text1 div p {
     margin-top: 16px;
     font-size: .875rem;
     line-height: 3rem;
   }
 
+  main .comment .comment-content .comment-text2 {
+    font-size: .875rem;
+  }
+
+  main .comment .comment-content .comment-text2 p span {
+    font-size: 1.25rem;
+  }
+
   main .company .company-title {
     width: min(100% - 80px, 1120px);
   }
-  
+
   main .company .company-title img {
     left: -20px;
     width: 60px;
     height: 60px;
   }
-  
+
   main .company .company-title h2 {
     font-size: 1.5rem;
   }
-  
+
   main .company .company-title p {
     margin-top: 0px;
     font-size: .625rem;
   }
-  
+
   main .company dl dt {
     padding: 20px 28px;
     font-size: .875rem;
   }
-  
+
   main .company dl dd {
     padding: 20px 28px;
     font-size: .875rem;
   }
-  
+
   main .company dl dd iframe {
     height: 200px;
   }
@@ -856,7 +864,7 @@ media
   footer .footer-main .footer-menu ul {
     display: block;
   }
-  
+
   footer .footer-main .footer-menu ul li {
     margin-inline: auto;
   }
@@ -864,11 +872,11 @@ media
   footer .footer-main .footer-menu ul .footer-service::before {
     background: transparent;
   }
-  
+
   footer .footer-main .footer-menu ul .footer-service::after {
     background: transparent;
   }
-  
+
   footer .footer-main .footer-menu ul .footer-contact::before {
     background: transparent;
   }
@@ -882,7 +890,7 @@ media
     width: 20px;
     height: 20px;
   }
-  
+
   footer .footer-main .footer-logo .footer-logo-name a span {
     font-size: 1rem;
   }
@@ -891,5 +899,3 @@ media
     font-size: .625rem;
   }
 }
-
-
