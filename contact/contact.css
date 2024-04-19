@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "myfont1";
+  src: url("../font/GenEiChikugoMin3-R.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("../font/GenEiGothicN-Regular.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont3";
+  src: url("../font/GenEiGothicN-ExtraLigh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont4";
+  src: url("../font/GenEiGothicN-Ligh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont5";
+  src: url("../font/GenEiGothicN-SemiLight.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont6";
+  src: url("../font/GenEiGothicN-Heavy.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont7";
+  src: url("../font/GenEiGothicN-Bold.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont8";
+  src: url("../font/GenEiGothicN-SemiBold.otf") format(opentype);
+}
+
 /*=======================================================================
 common
 =======================================================================*/
@@ -27,6 +67,15 @@ img {
   vertical-align: bottom;
 }
 
+input:not([type='checkbox']),
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  border-radius: 0px;
+}
+
 /*=======================================================================
 header
 =======================================================================*/
@@ -36,10 +85,12 @@ header {
   align-items: center;
   width: 100%;
   height: 72px;
-  padding: 0 36px;
+  padding: 0 20px;
 }
 
 header h1 {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
   line-height: 40px;
   white-space: nowrap;
@@ -48,11 +99,7 @@ header h1 {
 }
 
 header h1 span {
-  font-size: 2rem;
-}
-
-header h1.show {
-  color: #fff;
+  font-size: 1.875rem;
 }
 
 header .header-menu ul {
@@ -60,8 +107,9 @@ header .header-menu ul {
 }
 
 header .header-menu ul li {
-  width: 160px;
-  height: 48px;
+  font-family: "myfont1";
+  width: 132px;
+  height: 32px;
 }
 
 header .header-menu ul li a {
@@ -90,7 +138,7 @@ header .header-menu .header-service::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -102,7 +150,7 @@ header .header-menu .header-service::after {
   right: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -118,7 +166,7 @@ header .header-menu .header-contact::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -138,14 +186,28 @@ header #hamburger #border1 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border1.show {
   transform: rotate(45deg) translate(-7px, 21px);
-  background: #fff;
+}
+
+header #hamburger #border-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: opacity .3s;
+}
+
+header #hamburger #border-center.show {
+  opacity: 0;
 }
 
 header #hamburger #border2 {
@@ -154,24 +216,23 @@ header #hamburger #border2 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border2.show {
   transform: rotate(-45deg) translate(-5px, -22px);
-  background: #fff;
 }
 
 header #menu {
   position: fixed;
-  top: 100px;
+  top: 72px;
   left: 50%;
   transform: translateX(-50%);
-  width: 360px;
+  width: 100%;
+  border-top: 1px solid #bbb;
   text-align: center;
-  color: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -183,8 +244,10 @@ header #menu.show {
 }
 
 header #menu ul li {
+  font-family: "myfont1";
   width: 100%;
-  padding: 24px 0;
+  padding: 32px 0;
+  border-bottom: 1px solid #bbb;
   text-align: center;
   cursor: pointer;
 }
@@ -193,7 +256,7 @@ header #menu ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -253,7 +316,7 @@ header #menu.show li:nth-child(4) {
 header #mask {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .9);
+  background: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -299,12 +362,14 @@ main .mainvisual .mainvisual-text {
 }
 
 main .mainvisual .mainvisual-text div .main-p {
+  font-family: "myfont1";
   font-size: 3rem;
   white-space: nowrap;
 }
 
 main .mainvisual .mainvisual-text div .sub-p {
-  margin-top: -12px;
+  margin-top: -4px;
+  font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   white-space: nowrap;
 }
@@ -314,12 +379,14 @@ contactform
 =======================================================================*/
 main .pc-p {
   margin-top: 32px;
+  font-family: 'Myfont2';
   font-size: 1.25rem;
   text-align: center;
 }
 
 main .sp-p {
   margin-top: 32px;
+  font-family: 'Myfont2';
   font-size: 1.25rem;
   text-align: center;
   display: none;
@@ -329,6 +396,7 @@ main .contact>p {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
   margin-top: 32px;
+  font-family: 'Myfont2';
   font-size: 1.5rem;
   color: #fff;
   padding: 12px 0;
@@ -366,6 +434,7 @@ main .contact form .contact-form .type label {
   position: relative;
   width: 35%;
   padding: 4px 16px;
+  font-family: 'Myfont2';
   font-size: 1.125rem;
   white-space: nowrap;
 }
@@ -376,6 +445,7 @@ main .contact form .contact-form .type .required::after {
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
+  font-family: 'Myfont2';
   color: #fff;
   background: red;
   border-radius: 8px;
@@ -389,6 +459,7 @@ main .contact form .contact-form .type .required.content::after {
   right: 8px;
   top: 18px;
   transform: translateY(-50%);
+  font-family: 'Myfont2';
   color: #fff;
   background: red;
   border-radius: 8px;
@@ -405,34 +476,53 @@ main .contact form .contact-form .type select {
   position: relative;
   width: 65%;
   padding: 4px 8px;
+  font-family: 'Myfont2';
   font-size: 1.125rem;
+  border: 1px solid #000;
+  border-radius: 4px;
 }
 
 main .contact form .contact-form .type input {
   position: relative;
   width: 65%;
   padding: 4px 8px;
+  font-family: 'Myfont2';
   font-size: 1.125rem;
+  border: 1px solid #000;
+  border-radius: 4px;
 }
 
 main .contact form .contact-form .type textarea {
   position: relative;
   width: 65%;
   padding: 4px 8px;
+  font-family: 'Myfont2';
   font-size: 1.125rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  resize: none;
 }
 
 main .contact form .contact-form .type input[type="checkbox"] {
   width: 16px;
+  height: 16px;
 }
 
-main .contact form .contact-form .type p {
-  width: calc(65% - 16px);
-  padding: 4px;
+main .contact form .contact-form .type .sp-checkbox {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-main .contact form .type textarea {
-  resize: none;
+main .contact form .contact-form .type .sp-checkbox input {
+  margin-top: 4px;
+  width: 16px;
+}
+
+main .contact form .contact-form .type .sp-checkbox p {
+  width: calc(100% - 16px);
+  font-family: 'Myfont2';
+  padding: 0 4px;
 }
 
 main .contact form .type p a {
@@ -450,8 +540,24 @@ main form .contact-btn {
   margin-inline: auto;
   margin-top: 48px;
   color: #fff;
+  font-family: "myfont1";
+  background: #bbb;
+  text-align: center;
+  pointer-events: none;
+  transition: transform .3s, opacity .3s;
+}
+
+main form .contact-btn.show {
+  position: relative;
+  font-size: 1.125rem;
+  width: 240px;
+  margin-inline: auto;
+  margin-top: 48px;
+  color: #fff;
+  font-family: "myfont1";
   background: #c85f48;
   text-align: center;
+  pointer-events: all;
   cursor: pointer;
   transition: transform .3s, opacity .3s;
 }
@@ -477,10 +583,21 @@ main form .contact-btn:active {
 main form .contact-btn a {
   display: block;
   width: 100%;
-  padding: 15px 0;
+  padding: 19px 0;
 }
 
 main form .contact-btn .contact-btn-shadow {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 240px;
+  height: 57px;
+  border: 1px solid #bbb;
+  transition: transform .3s;
+  pointer-events: none;
+}
+
+main form .contact-btn.show .contact-btn-shadow {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -499,8 +616,9 @@ main form .contact-btn:active .contact-btn-shadow {
 footer
 =======================================================================*/
 footer {
-  margin-top: 60px;
+  font-family: "myfont1";
   padding: 60px 0 16px;
+  margin-top: 32px;
   color: #ffffff;
   background: #104383;
 }
@@ -605,11 +723,15 @@ footer .footer-main .footer-logo .footer-logo-name {
 }
 
 footer .footer-main .footer-logo .footer-logo-name a {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
+  line-height: 40px;
+  white-space: nowrap;
 }
 
-footer .footer-main .footer-logo .footer-logo-name a img {
-  vertical-align: middle;
+footer .footer-main .footer-logo .footer-logo-name a span {
+  font-size: 1.875rem;
 }
 
 footer .footer-main .footer-logo .footer-logo-address {
@@ -630,7 +752,7 @@ footer .footer-copy {
 /*=======================================================================
 media
 =======================================================================*/
-@media screen and (max-width:980px) {
+@media screen and (max-width:900px) {
   header .header-menu {
     display: none;
   }
@@ -644,16 +766,6 @@ media
   }
 }
 
-@media screen and (max-width:800px) {
-  main .comment .comment-content .comment-text1 .pc-h3 {
-    display: none;
-  }
-
-  main .comment .comment-content .comment-text1 .sp-h3 {
-    display: block;
-  }
-}
-
 @media screen and (max-width:720px) {
   main .pc-p {
     display: none;
@@ -662,55 +774,140 @@ media
   main .sp-p {
     display: block;
   }
-
-  main .contact form .contact-form .type label {
-    position: relative;
-    width: 35%;
-    padding: 4px 16px;
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-  main .contact form .contact-form .type .required::after {
-    content: '*';
-    position: absolute;
-    right: calc(100% - 12px);
-    top: calc(50% + 4px);
-    color: red;
-    background: none;
-    border-radius: 0px;
-    padding: 0px;
-    font-size: .75rem;
-  }
-
-  main .contact form .contact-form .type .required.content::after {
-    content: '*';
-    position: absolute;
-    right: calc(100% - 12px);
-    top: 18px;
-    color: red;
-    background: none;
-    border-radius: 0px;
-    padding: 0px;
-    font-size: .75rem;
-  }
-
-  main .contact form .contact-form .type select {
-    font-size: 1rem;
-  }
-
-  main .contact form .contact-form .type input {
-    font-size: 1rem;
-  }
-
-  main .contact form .contact-form .type textarea {
-    font-size: 1rem;
-  }
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:600px) {
+  main .mainvisual .mainvisual-text .pc-p {
+    font-size: 2.125rem;
+  }
+
+  main .mainvisual .mainvisual-text .sub-p {
+    font-size: 1.25rem;
+  }
+
   footer .footer-main .footer-logo .footer-logo-address {
     display: block;
     text-align: center;
   }
+
+  footer .footer-main .footer-logo .footer-logo-address p:nth-child(2) {
+    margin-top: 8px;
+  }
 }
+
+@media screen and (max-width:600px) {
+  header h1 {
+    font-size: 1.125rem;
+    line-height: 20px;
+  }
+
+  header h1 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  header h1 span {
+    font-size: 1rem;
+  }
+  
+  main .mainvisual .mainvisual-text {
+    height: 80px;
+    width: 200px;
+  }
+  
+  main .mainvisual .mainvisual-text div .main-p {
+    font-size: 1.5rem;
+  }
+  
+  main .mainvisual .mainvisual-text div .sub-p {
+    margin-top: 4px;
+    font-size: .625rem;
+  }
+
+  main .sp-p {
+    font-size: 1rem;
+  }
+
+  main .contact>p {
+    font-size: 1rem;
+  }
+  
+  main .contact form .contact-form .type {
+    display: block;
+  }
+  
+  main .contact form .contact-form .type label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    font-size: .875rem;
+  }
+
+  main .contact form .contact-form .type select {
+    width: 100%;
+    font-size: .875rem;
+  }
+  
+  main .contact form .contact-form .type input {
+    width: 100%;
+    font-size: .875rem;
+  }
+  
+  main .contact form .contact-form .type textarea {
+    width: 100%;
+    font-size: .875rem;
+  }
+
+  main .contact form .contact-form .type .sp-checkbox {
+    width: 100%;
+  }
+
+  main .contact form .contact-form .type .sp-checkbox p {
+    font-size: .75rem;
+  }
+  
+  footer {
+    padding: 24px 0 16px;
+  }
+
+  footer .footer-main .footer-menu ul {
+    display: block;
+  }
+  
+  footer .footer-main .footer-menu ul li {
+    margin-inline: auto;
+  }
+
+  footer .footer-main .footer-menu ul .footer-service::before {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-service::after {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-contact::before {
+    background: transparent;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a {
+    font-size: 1.25rem;
+    line-height: 20px;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  footer .footer-main .footer-logo .footer-logo-name a span {
+    font-size: 1rem;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address {
+    font-size: .625rem;
+  }
+}
+
+

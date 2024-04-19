@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "myfont1";
+  src: url("../font/GenEiChikugoMin3-R.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("../font/GenEiGothicN-Regular.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont3";
+  src: url("../font/GenEiGothicN-ExtraLigh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont4";
+  src: url("../font/GenEiGothicN-Ligh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont5";
+  src: url("../font/GenEiGothicN-SemiLight.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont6";
+  src: url("../font/GenEiGothicN-Heavy.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont7";
+  src: url("../font/GenEiGothicN-Bold.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont8";
+  src: url("../font/GenEiGothicN-SemiBold.otf") format(opentype);
+}
+
 /*=======================================================================
 common
 =======================================================================*/
@@ -36,10 +76,12 @@ header {
   align-items: center;
   width: 100%;
   height: 72px;
-  padding: 0 36px;
+  padding: 0 20px;
 }
 
 header h1 {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
   line-height: 40px;
   white-space: nowrap;
@@ -48,11 +90,7 @@ header h1 {
 }
 
 header h1 span {
-  font-size: 2rem;
-}
-
-header h1.show {
-  color: #fff;
+  font-size: 1.875rem;
 }
 
 header .header-menu ul {
@@ -60,8 +98,9 @@ header .header-menu ul {
 }
 
 header .header-menu ul li {
-  width: 160px;
-  height: 48px;
+  font-family: "myfont1";
+  width: 132px;
+  height: 32px;
 }
 
 header .header-menu ul li a {
@@ -90,7 +129,7 @@ header .header-menu .header-service::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -102,7 +141,7 @@ header .header-menu .header-service::after {
   right: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -118,7 +157,7 @@ header .header-menu .header-contact::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -138,14 +177,28 @@ header #hamburger #border1 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border1.show {
   transform: rotate(45deg) translate(-7px, 21px);
-  background: #fff;
+}
+
+header #hamburger #border-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: opacity .3s;
+}
+
+header #hamburger #border-center.show {
+  opacity: 0;
 }
 
 header #hamburger #border2 {
@@ -154,24 +207,23 @@ header #hamburger #border2 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border2.show {
   transform: rotate(-45deg) translate(-5px, -22px);
-  background: #fff;
 }
 
 header #menu {
   position: fixed;
-  top: 100px;
+  top: 72px;
   left: 50%;
   transform: translateX(-50%);
-  width: 360px;
+  width: 100%;
+  border-top: 1px solid #bbb;
   text-align: center;
-  color: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -183,8 +235,10 @@ header #menu.show {
 }
 
 header #menu ul li {
+  font-family: "myfont1";
   width: 100%;
-  padding: 24px 0;
+  padding: 32px 0;
+  border-bottom: 1px solid #bbb;
   text-align: center;
   cursor: pointer;
 }
@@ -193,7 +247,7 @@ header #menu ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -253,7 +307,7 @@ header #menu.show li:nth-child(4) {
 header #mask {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .9);
+  background: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -299,12 +353,14 @@ main .mainvisual .mainvisual-text {
 }
 
 main .mainvisual .mainvisual-text div .main-p {
+  font-family: "myfont1";
   font-size: 3rem;
   white-space: nowrap;
 }
 
 main .mainvisual .mainvisual-text div .sub-p {
-  margin-top: -12px;
+  margin-top: -4px;
+  font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   white-space: nowrap;
 }
@@ -320,10 +376,12 @@ main .recruit-text {
 }
 
 main .recruit-text>p {
+  font-family: "myfont2";
+  font-size: 1.25rem;
   line-height: 1.75;
 }
 
-main .recruit-text>p:nth-child(2) {
+main .recruit-text>p+p {
   margin-top: 16px;
 }
 
@@ -331,22 +389,28 @@ main .recruit-text div {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   margin-top: 32px;
 }
-
 
 main .recruit-text div img {
   vertical-align: middle;
 }
 
 main .recruit-text div p {
-  font-size: 2.125rem;
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+
+main .recruit-text div p span {
+  font-size: 1.875rem;
 }
 
 /*=======================================================================
 recruit-personal
 =======================================================================*/
-main .recruit-personal {
+/* main .recruit-personal {
   background: rgba(217, 217, 217, .3);
 }
 
@@ -358,6 +422,7 @@ main .recruit-personal>div {
 
 main .recruit-personal>div h3 {
   position: relative;
+  font-family: 'myfont1';
   font-size: 2rem;
   text-align: center;
 }
@@ -387,6 +452,11 @@ main .recruit-personal>div>div div img {
   width: 100%;
 }
 
+main .recruit-personal>div>div .recruit-personal-text {
+  font-family: 'myfont2';
+  font-size: 1.125rem;
+} */
+
 /*=======================================================================
 recruit-content
 =======================================================================*/
@@ -398,6 +468,7 @@ main .recruit-content {
 
 main .recruit-content h3 {
   position: relative;
+  font-family: 'myfont1';
   font-size: 2rem;
   text-align: center;
 }
@@ -424,6 +495,7 @@ main .recruit-content dl {
 main .recruit-content dl dt {
   width: 30%;
   padding: 28px;
+  font-family: 'myfont2';
   font-size: 1.125rem;
   border-bottom: 1px solid #878787;
 }
@@ -431,6 +503,7 @@ main .recruit-content dl dt {
 main .recruit-content dl dd {
   width: 70%;
   padding: 28px;
+  font-family: 'myfont2';
   font-size: 1.125rem;
   border-bottom: 1px solid #878787;
 }
@@ -451,6 +524,7 @@ main .recruit-contact>div {
 
 main .recruit-contact>div h3 {
   position: relative;
+  font-family: 'myfont1';
   font-size: 2rem;
   text-align: center;
 }
@@ -468,6 +542,9 @@ main .recruit-contact>div h3::before {
 
 main .recruit-contact>div>p {
   margin-top: 48px;
+  font-family: 'myfont2';
+  font-size: 1.25rem;
+  letter-spacing: 2px;
   text-align: center;
 }
 
@@ -494,10 +571,12 @@ main .recruit-contact>div .recruit-entry div p:nth-child(1) {
 }
 
 main .recruit-contact>div .recruit-entry div p:nth-child(2) {
+  font-family: 'myfont2';
   font-size: 1.25rem;
 }
 
 main .recruit-contact>div .recruit-entry .recruit-entry-btn {
+  font-family: 'myfont1';
   font-size: 1.5rem;
   color: #fff;
   background: #c85f48;
@@ -513,7 +592,7 @@ main .recruit-contact>div .recruit-entry .recruit-entry-btn a {
   position: relative;
   display: block;
   width: 100%;
-  padding: 24px 0;
+  padding: 28px 0;
 }
 
 main .recruit-contact>div .recruit-entry .recruit-entry-btn a::after {
@@ -529,6 +608,7 @@ main .recruit-contact>div .recruit-entry .recruit-entry-btn a::after {
 footer
 =======================================================================*/
 footer {
+  font-family: "myfont1";
   padding: 60px 0 16px;
   color: #ffffff;
   background: #104383;
@@ -634,11 +714,15 @@ footer .footer-main .footer-logo .footer-logo-name {
 }
 
 footer .footer-main .footer-logo .footer-logo-name a {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
+  line-height: 40px;
+  white-space: nowrap;
 }
 
-footer .footer-main .footer-logo .footer-logo-name a img {
-  vertical-align: middle;
+footer .footer-main .footer-logo .footer-logo-name a span {
+  font-size: 1.875rem;
 }
 
 footer .footer-main .footer-logo .footer-logo-address {
@@ -659,7 +743,7 @@ footer .footer-copy {
 /*=======================================================================
 media
 =======================================================================*/
-@media screen and (max-width:980px) {
+@media screen and (max-width:900px) {
   header .header-menu {
     display: none;
   }
@@ -670,23 +754,6 @@ media
 
   header #mask {
     display: block;
-  }
-}
-
-@media screen and (max-width:900px) {
-  main .recruit-personal>div>div {
-    margin-top: 48px;
-    display: block;
-    gap: 0px;
-  }
-
-  main .recruit-personal>div>div div {
-    width: 100%;
-  }
-
-  main .recruit-personal>div>div .recruit-personal-text {
-    margin-top: 24px;
-    text-align: center;
   }
 
   main .recruit-contact>div .recruit-entry {
@@ -705,9 +772,145 @@ media
   }
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:600px) {
+  main .mainvisual .mainvisual-text .pc-p {
+    font-size: 2.125rem;
+  }
+
+  main .mainvisual .mainvisual-text .sub-p {
+    font-size: 1.25rem;
+  }
+
   footer .footer-main .footer-logo .footer-logo-address {
     display: block;
     text-align: center;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address p:nth-child(2) {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  header h1 {
+    font-size: 1.125rem;
+    line-height: 20px;
+  }
+
+  header h1 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  header h1 span {
+    font-size: 1rem;
+  }
+  
+  main .mainvisual .mainvisual-text {
+    height: 80px;
+    width: 200px;
+  }
+  
+  main .mainvisual .mainvisual-text div .main-p {
+    font-size: 1.5rem;
+  }
+  
+  main .mainvisual .mainvisual-text div .sub-p {
+    margin-top: 4px;
+    font-size: .625rem;
+  }
+
+  main .recruit-text>p {
+    font-size: 1rem;
+  }
+  
+  main .recruit-text div img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+  }
+
+  main .recruit-text div p {
+    font-family: "M PLUS 2", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  main .recruit-text div p span {
+    font-size: 1.25rem;
+  }
+
+  main .recruit-content h3 {
+    font-size: 1.25rem;
+  }
+  
+  main .recruit-content dl dt {
+    font-size: .875rem;
+  }
+  
+  main .recruit-content dl dd {
+    font-size: .875rem;
+  }
+
+  main .recruit-contact>div h3 {
+    font-size: 1.5rem;
+  }
+  
+  main .recruit-contact>div>p {
+    font-size: 1rem;
+  }
+
+  main .recruit-contact>div .recruit-entry div p:nth-child(1) {
+    font-size: 2rem;
+  }
+  
+  main .recruit-contact>div .recruit-entry div p:nth-child(2) {
+    font-size: 1rem;
+  }
+  
+  main .recruit-contact>div .recruit-entry .recruit-entry-btn {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    padding: 24px 0 16px;
+  }
+
+  footer .footer-main .footer-menu ul {
+    display: block;
+  }
+  
+  footer .footer-main .footer-menu ul li {
+    margin-inline: auto;
+  }
+
+  footer .footer-main .footer-menu ul .footer-service::before {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-service::after {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-contact::before {
+    background: transparent;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a {
+    font-size: 1.25rem;
+    line-height: 20px;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  footer .footer-main .footer-logo .footer-logo-name a span {
+    font-size: 1rem;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address {
+    font-size: .625rem;
   }
 }

@@ -1,5 +1,45 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "myfont1";
+  src: url("../font/GenEiChikugoMin3-R.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("../font/GenEiGothicN-Regular.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont3";
+  src: url("../font/GenEiGothicN-ExtraLigh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont4";
+  src: url("../font/GenEiGothicN-Ligh.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont5";
+  src: url("../font/GenEiGothicN-SemiLight.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont6";
+  src: url("../font/GenEiGothicN-Heavy.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont7";
+  src: url("../font/GenEiGothicN-Bold.otf") format(opentype);
+}
+
+@font-face {
+  font-family: "myfont8";
+  src: url("../font/GenEiGothicN-SemiBold.otf") format(opentype);
+}
+
 /*=======================================================================
 common
 =======================================================================*/
@@ -36,10 +76,12 @@ header {
   align-items: center;
   width: 100%;
   height: 72px;
-  padding: 0 36px;
+  padding: 0 20px;
 }
 
 header h1 {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
   line-height: 40px;
   white-space: nowrap;
@@ -48,11 +90,7 @@ header h1 {
 }
 
 header h1 span {
-  font-size: 2rem;
-}
-
-header h1.show {
-  color: #fff;
+  font-size: 1.875rem;
 }
 
 header .header-menu ul {
@@ -60,8 +98,9 @@ header .header-menu ul {
 }
 
 header .header-menu ul li {
-  width: 160px;
-  height: 48px;
+  font-family: "myfont1";
+  width: 132px;
+  height: 32px;
 }
 
 header .header-menu ul li a {
@@ -90,7 +129,7 @@ header .header-menu .header-service::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -102,7 +141,7 @@ header .header-menu .header-service::after {
   right: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -118,7 +157,7 @@ header .header-menu .header-contact::before {
   left: 0;
   transform: translateY(-50%);
   width: 1px;
-  height: 30px;
+  height: 32px;
   background: #000;
   opacity: .6;
 }
@@ -138,14 +177,28 @@ header #hamburger #border1 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border1.show {
   transform: rotate(45deg) translate(-7px, 21px);
-  background: #fff;
+}
+
+header #hamburger #border-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: opacity .3s;
+}
+
+header #hamburger #border-center.show {
+  opacity: 0;
 }
 
 header #hamburger #border2 {
@@ -154,24 +207,23 @@ header #hamburger #border2 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border2.show {
   transform: rotate(-45deg) translate(-5px, -22px);
-  background: #fff;
 }
 
 header #menu {
   position: fixed;
-  top: 100px;
+  top: 72px;
   left: 50%;
   transform: translateX(-50%);
-  width: 360px;
+  width: 100%;
+  border-top: 1px solid #bbb;
   text-align: center;
-  color: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -183,8 +235,10 @@ header #menu.show {
 }
 
 header #menu ul li {
+  font-family: "myfont1";
   width: 100%;
-  padding: 24px 0;
+  padding: 32px 0;
+  border-bottom: 1px solid #bbb;
   text-align: center;
   cursor: pointer;
 }
@@ -193,7 +247,7 @@ header #menu ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   cursor: pointer;
 }
 
@@ -253,7 +307,7 @@ header #menu.show li:nth-child(4) {
 header #mask {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .9);
+  background: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -299,12 +353,14 @@ main .mainvisual .mainvisual-text {
 }
 
 main .mainvisual .mainvisual-text div .main-p {
+  font-family: "myfont1";
   font-size: 3rem;
   white-space: nowrap;
 }
 
 main .mainvisual .mainvisual-text div .sub-p {
-  margin-top: -12px;
+  margin-top: -4px;
+  font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   white-space: nowrap;
 }
@@ -361,13 +417,15 @@ main .comment .comment-content::after {
 }
 
 main .comment .comment-title h2 {
+  font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .comment .comment-title p {
-  margin-top: -8px;
+  margin-top: -4px;
+  font-family: "Playfair Display", serif;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -376,7 +434,9 @@ main .comment .comment-content {
 }
 
 main .comment .comment-content .comment-text1 h3 {
+  font-family: "myfont1";
   font-size: 2.25rem;
+  line-height: 1.75;
   color: #c85f48;
   text-align: center;
 }
@@ -396,6 +456,7 @@ main .comment .comment-content .comment-text1 div {
 main .comment .comment-content .comment-text1 div p {
   position: relative;
   margin-top: 32px;
+  font-family: "myfont1";
   font-size: 1.15rem;
   line-height: 4rem;
   padding: 0 8px;
@@ -403,6 +464,7 @@ main .comment .comment-content .comment-text1 div p {
 
 main .comment .comment-content .comment-text2 {
   margin-top: 24px;
+  font-family: "myfont1";
   text-align: end;
 }
 
@@ -451,13 +513,15 @@ main .company .company-title img {
 }
 
 main .company .company-title h2 {
+  font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
 main .company .company-title p {
-  margin-top: -8px;
+  margin-top: -4px;
+  font-family: "Playfair Display", serif;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -481,6 +545,7 @@ main .company dl {
 main .company dl dt {
   width: 30%;
   padding: 28px;
+  font-family: "myfont2";
   font-size: 1.125rem;
   border-bottom: 1px solid #111;
 }
@@ -488,6 +553,7 @@ main .company dl dt {
 main .company dl dd {
   width: 70%;
   padding: 28px;
+  font-family: "myfont2";
   font-size: 1.125rem;
   border-bottom: 1px solid #111;
 }
@@ -501,17 +567,18 @@ main .company dl dd iframe {
 footer
 =======================================================================*/
 footer {
+  font-family: "myfont1";
   padding: 60px 0 16px;
   color: #ffffff;
   background: #104383;
 }
 
-footer .footer-main  {
+footer .footer-main {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
 }
 
-footer .footer-main .footer-menu  {
+footer .footer-main .footer-menu {
   position: relative;
   padding-bottom: 16px;
 }
@@ -606,11 +673,15 @@ footer .footer-main .footer-logo .footer-logo-name {
 }
 
 footer .footer-main .footer-logo .footer-logo-name a {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
+  line-height: 40px;
+  white-space: nowrap;
 }
 
-footer .footer-main .footer-logo .footer-logo-name a img {
-  vertical-align: middle;
+footer .footer-main .footer-logo .footer-logo-name a span {
+  font-size: 1.875rem;
 }
 
 footer .footer-main .footer-logo .footer-logo-address {
@@ -631,7 +702,7 @@ footer .footer-copy {
 /*=======================================================================
 media
 =======================================================================*/
-@media screen and (max-width:980px) {
+@media screen and (max-width:900px) {
   header .header-menu {
     display: none;
   }
@@ -639,16 +710,13 @@ media
   header #hamburger {
     display: block;
   }
-  
+
   header #mask {
     display: block;
   }
 }
 
-@media screen and (max-width:900px) {
-}
-
-@media screen and (max-width:800px) {
+@media screen and (max-width:810px) {
   main .comment .comment-content .comment-text1 .pc-h3 {
     display: none;
   }
@@ -658,15 +726,170 @@ media
   }
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:600px) {
+  main .mainvisual .mainvisual-text .pc-p {
+    font-size: 2.125rem;
+  }
+
+  main .mainvisual .mainvisual-text .sub-p {
+    font-size: 1.25rem;
+  }
+
   footer .footer-main .footer-logo .footer-logo-address {
     display: block;
     text-align: center;
   }
+
+  footer .footer-main .footer-logo .footer-logo-address p:nth-child(2) {
+    margin-top: 8px;
+  }
 }
 
-@media screen and (max-width:600px) {
-}
+@media screen and (max-width:400px) {
+  header h1 {
+    font-size: 1.125rem;
+    line-height: 20px;
+  }
 
+  header h1 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  header h1 span {
+    font-size: 1rem;
+  }
+  
+  main .mainvisual .mainvisual-text {
+    height: 80px;
+    width: 200px;
+  }
+  
+  main .mainvisual .mainvisual-text div .main-p {
+    font-size: 1.5rem;
+  }
+  
+  main .mainvisual .mainvisual-text div .sub-p {
+    margin-top: 4px;
+    font-size: .625rem;
+  }
+  
+  main .comment .comment-title {
+    width: min(100% - 80px, 1120px);
+  }
+  
+  main .comment .comment-title img {
+    left: -20px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  main .comment .comment-content {
+    margin-top: -32px;
+  }
+  
+  main .comment .comment-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  main .comment .comment-title p {
+    margin-top: 0px;
+    font-size: .625rem;
+  }
+
+  main .comment .comment-content {
+    margin-top: -60px;
+  }
+  
+  main .comment .comment-content .comment-text1 h3 {
+    font-size: 1.25rem;
+  }
+
+  main .comment .comment-content .comment-text1 div {
+    background-size: 100% 3rem;
+    line-height: 3rem;
+  }
+  
+  main .comment .comment-content .comment-text1 div p {
+    margin-top: 16px;
+    font-size: .875rem;
+    line-height: 3rem;
+  }
+
+  main .company .company-title {
+    width: min(100% - 80px, 1120px);
+  }
+  
+  main .company .company-title img {
+    left: -20px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  main .company .company-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  main .company .company-title p {
+    margin-top: 0px;
+    font-size: .625rem;
+  }
+  
+  main .company dl dt {
+    padding: 20px 28px;
+    font-size: .875rem;
+  }
+  
+  main .company dl dd {
+    padding: 20px 28px;
+    font-size: .875rem;
+  }
+  
+  main .company dl dd iframe {
+    height: 200px;
+  }
+
+  footer {
+    padding: 24px 0 16px;
+  }
+
+  footer .footer-main .footer-menu ul {
+    display: block;
+  }
+  
+  footer .footer-main .footer-menu ul li {
+    margin-inline: auto;
+  }
+
+  footer .footer-main .footer-menu ul .footer-service::before {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-service::after {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-contact::before {
+    background: transparent;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a {
+    font-size: 1.25rem;
+    line-height: 20px;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  footer .footer-main .footer-logo .footer-logo-name a span {
+    font-size: 1rem;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address {
+    font-size: .625rem;
+  }
+}
 
 

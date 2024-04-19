@@ -4,8 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>トップページ | 株式会社 永和</title>
+  <title>お問い合わせ | 株式会社 永和</title>
   <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="company.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&family=Shippori+Mincho&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -27,6 +39,7 @@
 
     <div id="hamburger">
       <div id="border1"></div>
+      <div id="border-center"></div>
       <div id="border2"></div>
     </div>
 
@@ -59,11 +72,11 @@
 
     <section class="contact">
       <p>お問い合わせフォーム</p>
-      <form>
+      <form id="form" action="mail.php">
         <div class="contact-form">
           <div class="type">
-            <label for="category" class="required">お問い合わせ種別</label>
-            <select required name="category">
+            <label for="お問い合わせ種別" class="required">お問い合わせ種別</label>
+            <select name="お問い合わせ種別" id="check1" required>
               <option selected>-- お問い合わせ種別を選択してください --</option>
               <option>商品内容について</option>
               <option>ご注文について</option>
@@ -72,48 +85,50 @@
           </div>
 
           <div class="type">
-            <label for="name" class="required">お名前</label>
-            <input type="text" name="name" required>
+            <label for="お名前" class="required">お名前</label>
+            <input type="text" name="お名前" id="check2" required>
           </div>
 
           <div class="type">
-            <label for="furigana">フリガナ</label>
-            <input type="text" name="furigana">
+            <label for="フリガナ">フリガナ</label>
+            <input type="text" name="フリガナ">
           </div>
 
           <div class="type">
-            <label for="mail" class="required">メールアドレス</label>
-            <input type="mail" name="mail" required>
+            <label for="メールアドレス" class="required">メールアドレス</label>
+            <input type="mail" name="メールアドレス" id="check3" required>
           </div>
 
           <div class="type">
-            <label for="confirmedmail" class="required">確認のためもう一度</label>
-            <input type="mail" name="confirmedmail" required>
+            <label for="確認用メールアドレス" class="required">確認のためもう一度</label>
+            <input type="mail" name="確認用メールアドレス" id="check4" required>
           </div>
 
           <div class="type">
-            <label for="tel" class="required">連絡先電話番号</label>
-            <input type="tel" name="tel" required>
+            <label for="電話番号" class="required">連絡先電話番号</label>
+            <input type="tel" name="電話番号" id="check5" required>
           </div>
 
           <div class="type">
-            <label for="companyname">御社名</label>
-            <input type="text" name="companyname">
+            <label for="御社名">御社名</label>
+            <input type="text" name="御社名">
           </div>
 
           <div class="type">
-            <label for="content" class="required content">お問い合わせ内容</label>
-            <textarea name="content" id="" cols="30" rows="10" required></textarea>
+            <label for="お問い合わせ内容" class="required content">お問い合わせ内容</label>
+            <textarea name="お問い合わせ内容" id="check6" cols="30" rows="10" required></textarea>
           </div>
 
           <div class="type">
-            <label for="send" class="required send">送信確認</label>
-            <input type="checkbox" name="send">
-            <p><a href="privacy.html" target="_blank">【個人情報の取り扱いについて】</a>をご確認のうえ、ご了承の場合にはチェックをお願いします。</p>
+            <label for="個人情報取り扱い" class="required send">送信確認</label>
+            <div class="sp-checkbox">
+              <input type="checkbox" name="個人情報取り扱い" id="check7" required>
+              <p><a href="privacy.html" target="_blank">【個人情報の取り扱いについて】</a>をご確認のうえ、ご了承の場合にはチェックをお願いします。</p>
+            </div>
           </div>
         </div>
 
-        <div class="contact-btn">
+        <div class="contact-btn" id="contact-btn">
           <a href="#">送信</a>
           <div class="contact-btn-shadow"></div>
         </div>
@@ -133,9 +148,9 @@
       </div>
       <div class="footer-logo">
         <div class="footer-logo-name">
-          <a href="../index.html">
+          <a href="index.html">
             <img src="logo.png" alt="株式会社永和のロゴマーク" width="40" height="40">
-            株式会社 永和
+            <span>株式会社</span> 永　和
           </a>
         </div>
         <div class="footer-logo-address">

@@ -89,12 +89,12 @@ header h1 {
   z-index: 5;
 }
 
-header h1 span {
-  font-size: 1.875rem;
+header h1 img {
+  transition: all .3s;
 }
 
-header h1.show {
-  color: #fff;
+header h1 span {
+  font-size: 1.875rem;
 }
 
 header .header-menu ul {
@@ -181,14 +181,28 @@ header #hamburger #border1 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border1.show {
   transform: rotate(45deg) translate(-7px, 21px);
-  background: #fff;
+}
+
+header #hamburger #border-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  background: #111;
+  transition: opacity .3s;
+}
+
+header #hamburger #border-center.show {
+  opacity: 0;
 }
 
 header #hamburger #border2 {
@@ -197,23 +211,22 @@ header #hamburger #border2 {
   left: 50%;
   transform: translateX(-50%);
   width: 42px;
-  height: 3px;
+  height: 2px;
   background: #111;
   transition: all .3s;
 }
 
 header #hamburger #border2.show {
   transform: rotate(-45deg) translate(-5px, -22px);
-  background: #fff;
 }
 
 header #menu {
   position: fixed;
-  top: 100px;
+  top: 72px;
   left: 50%;
   transform: translateX(-50%);
-  width: 360px;
-  color: #fff;
+  width: 100%;
+  border-top: 1px solid #bbb;
   text-align: center;
   opacity: 0;
   pointer-events: none;
@@ -228,7 +241,8 @@ header #menu.show {
 header #menu ul li {
   font-family: "myfont1";
   width: 100%;
-  padding: 24px 0;
+  padding: 32px 0;
+  border-bottom: 1px solid #bbb;
   text-align: center;
   cursor: pointer;
 }
@@ -297,7 +311,7 @@ header #menu.show li:nth-child(4) {
 header #mask {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, .9);
+  background: #fff;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s;
@@ -331,20 +345,20 @@ main .mainvisual .background {
 main .mainvisual .mainvisual-text {
   position: absolute;
   top: 50%;
-  left: 36px;
+  left: 40px;
   transform: translateY(-50%);
-  color: #fff;
   font-family: "myfont1";
+  color: #fff;
   z-index: 2;
 }
 
-main .mainvisual .mainvisual-text .pc-p,
-main .mainvisual .mainvisual-text .sp-p {
+main .mainvisual .mainvisual-text .pc-p {
   font-size: 4.25rem;
   white-space: nowrap;
   opacity: 0;
   transform: translateX(-100px);
-  animation: anime1 .6s .5s forwards;
+  transition: all .3s;
+  animation: anime1 .8s forwards;
 }
 
 @keyframes anime1 {
@@ -354,17 +368,14 @@ main .mainvisual .mainvisual-text .sp-p {
   }
 }
 
-main .mainvisual .mainvisual-text img {
-  margin-top: 28px;
-}
-
 main .mainvisual .mainvisual-text .sub-p {
-  margin-top: 28px;
+  margin-top: 36px;
   font-size: 2.25rem;
   white-space: nowrap;
   opacity: 0;
   transform: translateX(-100px);
-  animation: anime2 .6s .7s forwards;
+  transition: all .3s;
+  animation: anime2 .8s .6s forwards;
 }
 
 @keyframes anime2 {
@@ -372,10 +383,6 @@ main .mainvisual .mainvisual-text .sub-p {
     opacity: 1;
     transform: none;
   }
-}
-
-main .mainvisual .sp-p {
-  display: none;
 }
 
 main .mainvisual .square1 {
@@ -390,7 +397,7 @@ main .mainvisual .square1 {
       48% 100%);
   background: #1d52a9;
   opacity: 0;
-  animation: anime3 2s .5s forwards;
+  animation: anime3 2s 3.6s forwards;
 }
 
 @keyframes anime3 {
@@ -403,7 +410,6 @@ main .mainvisual .mainvisual-img1 {
   position: absolute;
   overflow: hidden;
   top: 35px;
-  /* left: calc(57% - 208px); */
   right: 494px;
   width: 336px;
   height: 280px;
@@ -416,8 +422,8 @@ main .mainvisual .mainvisual-img1 {
   background-size: 290%;
   background-position: 53% 60%;
   opacity: 0;
-  transform: translateX(-200px);
-  animation: anime4 1s .7s forwards;
+  transform: translate(-130px, -220px);
+  animation: anime4 1s 2s forwards;
 }
 
 @keyframes anime4 {
@@ -431,21 +437,20 @@ main .mainvisual .mainvisual-img2 {
   position: absolute;
   overflow: hidden;
   top: 335px;
-  /* left: calc(57% - 48px); */
-  right: 314px;
-  width: 355px;
-  height: 300px;
+  right: 286px;
+  width: 382px;
+  height: 360px;
   clip-path: polygon(0 0,
-      52% 0,
+      48% 0,
       100% 100%,
-      48% 100%);
+      52% 100%);
   background-image: url(mainvisual-img2.jpeg);
   background-repeat: no-repeat;
   background-size: 200%;
   background-position: 73% 20%;
   opacity: 0;
-  transform: translateY(200px);
-  animation: anime5 1s .8s forwards;
+  transform: translate(-130px, -220px);
+  animation: anime5 1s 1.4s forwards;
 }
 
 @keyframes anime5 {
@@ -459,7 +464,6 @@ main .mainvisual .mainvisual-img3 {
   position: absolute;
   overflow: hidden;
   top: 35px;
-  /* left: 57%; */
   right: -43px;
   width: 660px;
   height: 480px;
@@ -472,8 +476,8 @@ main .mainvisual .mainvisual-img3 {
   background-size: 127%;
   background-position: 10% 60%;
   opacity: 0;
-  transform: translateX(200px);
-  animation: anime6 2s .9s forwards;
+  transform: translate(-130px, -220px);
+  animation: anime6 2s 2.6s forwards;
 }
 
 @keyframes anime6 {
@@ -486,7 +490,6 @@ main .mainvisual .mainvisual-img3 {
 main .mainvisual .square2 {
   position: absolute;
   top: 535px;
-  /* left: calc(57% + 274px); */
   right: -315px;
   width: 660px;
   height: 480px;
@@ -496,7 +499,7 @@ main .mainvisual .square2 {
       40% 100%);
   background: #1d52a9;
   opacity: 0;
-  animation: anime7 2s .5s forwards;
+  animation: anime7 2s 3.6s forwards;
 }
 
 @keyframes anime7 {
@@ -533,11 +536,23 @@ main .about .about-title h2 {
 }
 
 main .about .about-title p {
+  font-family: "Playfair Display", serif;
   margin-top: -4px;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
-main .about .about-main {
+main .about .about-main>h3 {
+  display: none;
+  font-family: "myfont1";
+  font-size: 2.25rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  width: min(100% - 40px, 1120px);
+  margin-inline: auto;
+  margin-top: 24px;
+}
+
+main .about .about-main .about-block {
   display: flex;
   gap: 32px;
   width: min(100% - 40px, 1120px);
@@ -545,42 +560,45 @@ main .about .about-main {
   margin-top: 32px;
 }
 
-main .about .about-main>div {
+main .about .about-main .about-block>div {
   width: calc((100% - 32px) / 2);
 }
 
-main .about .about-main .about-content h3 {
-  font-size: 2.25rem;
+main .about .about-main .about-block .about-content h3 {
   font-family: "myfont1";
+  font-size: 2.25rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
-main .about .about-main .about-content .about-text {
-  margin-top: 32px;
+main .about .about-main .about-block .about-content .about-text {
   font-family: "myfont2";
+  margin-top: 32px;
 }
 
-main .about .about-main .about-content .about-text p {
+main .about .about-main .about-block .about-content .about-text p {
+  font-size: 1.125rem;
   line-height: 1.75;
 }
 
-main .about .about-main .about-content .about-text p+p {
+main .about .about-main .about-block .about-content .about-text p+p {
   margin-top: 16px;
 }
 
-main .about .about-content .about-btn {
+main .about .about-block .about-content .about-btn {
   position: relative;
-  font-size: 1.125rem;
   width: 240px;
   margin-top: 32px;
-  color: #fff;
   font-family: "myfont1";
+  font-size: 1.125rem;
+  color: #fff;
   background: #c85f48;
   text-align: center;
   cursor: pointer;
   transition: transform .3s, opacity .3s;
 }
 
-main .about .about-content .about-btn::after {
+main .about .about-block .about-content .about-btn::after {
   content: '>';
   position: absolute;
   top: 50%;
@@ -589,22 +607,22 @@ main .about .about-content .about-btn::after {
   color: #fff;
 }
 
-main .about .about-content .about-btn:hover {
+main .about .about-block .about-content .about-btn:hover {
   opacity: .6;
 }
 
-main .about .about-content .about-btn:active {
+main .about .about-block .about-content .about-btn:active {
   opacity: .4;
   transform: translate(2px, 2px);
 }
 
-main .about .about-content .about-btn a {
+main .about .about-block .about-content .about-btn a {
   display: block;
   width: 100%;
-  padding: 19.5px 0;
+  padding: 19px 0;
 }
 
-main .about .about-content .about-btn .about-btn-shadow {
+main .about .about-block .about-content .about-btn .about-btn-shadow {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -615,13 +633,22 @@ main .about .about-content .about-btn .about-btn-shadow {
   pointer-events: none;
 }
 
-main .about .about-content .about-btn:active .about-btn-shadow {
+main .about .about-block .about-content .about-btn:active .about-btn-shadow {
   transform: translate(-2px, -2px);
 }
 
-main .about .about-main .about-img img {
+main .about .about-main .about-block .about-img {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform .6s, opacity .6s;
+}
+
+main .about .about-main .about-block .about-img img {
   width: 100%;
 }
+
+
+
 
 /*=======================================================================
 service
@@ -660,10 +687,22 @@ main .service .service-title h2 {
 
 main .service .service-title p {
   margin-top: -4px;
+  font-family: "Playfair Display", serif;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
-main .service .service-main {
+main .service .service-main>h3 {
+  display: none;
+  font-family: "myfont1";
+  font-size: 2.25rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  width: min(100% - 40px, 1120px);
+  margin-inline: auto;
+  margin-top: 24px;
+}
+
+main .service .service-main .service-block {
   display: flex;
   flex-direction: row-reverse;
   gap: 32px;
@@ -672,26 +711,35 @@ main .service .service-main {
   margin-top: 32px;
 }
 
-main .service .service-main>div {
+main .service .service-main .service-block>div {
   width: calc((100% - 32px) / 2);
 }
 
-main .service .service-main .service-content h3 {
-  font-size: 2.25rem;
+main .service .service-main .service-block .service-content h3 {
   font-family: "myfont1";
+  font-size: 2.25rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
-main .service .service-main .service-content .service-text {
+main .service .service-main .service-block .service-content .service-text {
   font-family: "myfont2";
   margin-top: 32px;
 }
 
-main .service .service-main .service-content .service-text p {
+main .service .service-main .service-block .service-content .service-text p {
+  font-size: 1.125rem;
   line-height: 1.75;
 }
 
-main .service .service-main .service-content .service-text p+p {
+main .service .service-main .service-block .service-content .service-text p+p {
   margin-top: 16px;
+}
+
+main .service .service-main .service-img {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform .6s, opacity .6s;
 }
 
 main .service .service-main .service-img img {
@@ -717,9 +765,14 @@ main .service .service-supply>div {
   gap: 24px;
 }
 
-main .service .service-supply>div>div {
+main .service .service-supply>div .service1,
+main .service .service-supply>div .service2,
+main .service .service-supply>div .service3,
+main .service .service-supply>div .service4 {
   width: calc((100% - 72px) / 4);
   font-family: "myfont2";
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 main .service .service-supply>div>div div {
@@ -764,8 +817,12 @@ main .service .service-example>div {
   gap: 16px;
 }
 
-main .service .service-example>div>div {
+main .service .service-example>div .example1,
+main .service .service-example>div .example2,
+main .service .service-example>div .example3 {
   width: calc((100% - 32px) / 3);
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 main .service .service-example>div>div div {
@@ -799,8 +856,8 @@ main .history {
 main .history .history-content {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
-  text-align: center;
   font-family: "myfont1";
+  text-align: center;
   color: #fff;
 }
 
@@ -820,43 +877,35 @@ main .history .history-content .pc-since span {
   font-size: 10rem;
 }
 
-main .history .history-content .sp-since {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "myfont1";
-  font-size: 15rem;
-  white-space: nowrap;
-  line-height: 1;
-  opacity: .1;
-  z-index: -2;
-}
-
-main .history .history-content .sp-since span {
-  font-size: 10rem;
-}
-
-main .history .history-title p:nth-child(1) {
+main .history .history-title p {
   font-size: 2.5rem;
-}
-
-main .history .history-title p:nth-child(2) {
-  font-size: 1.5rem;
-}
-
-main .history .history-text {
-  margin-top: 48px;
-}
-
-main .history .history-text p {
-  font-size: 1.25rem;
-  line-height: 1.8;
   letter-spacing: 1px;
 }
 
-main .history .history-text p+p {
+main .history .pc-history-text {
+  margin-top: 48px;
+}
+
+main .history .pc-history-text p {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  letter-spacing: 1px;
+}
+
+main .history .sp-history-text {
+  display: none;
+  margin-top: 48px;
+}
+
+main .history .sp-history-text p {
+  font-size: .875rem;
+  line-height: 1.75;
+  letter-spacing: 1px;
+}
+
+
+main .history .pc-history-text p+p,
+main .history .sp-history-text p+p {
   margin-top: 32px;
 }
 
@@ -897,6 +946,7 @@ main .recruit .recruit-title h2 {
 
 main .recruit .recruit-title p {
   margin-top: -4px;
+  font-family: "Playfair Display", serif;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -953,7 +1003,7 @@ main .recruit .recruit-content .recruit-btn:active {
 main .recruit .recruit-content .recruit-btn a {
   display: block;
   width: 100%;
-  padding: 19.5px 0;
+  padding: 19px 0;
 }
 
 main .recruit .recruit-content .recruit-btn .recruit-btn-shadow {
@@ -971,7 +1021,13 @@ main .recruit .recruit-content .recruit-btn:active .recruit-btn-shadow {
   transform: translate(-2px, -2px);
 }
 
-main .recruit .recruit-content div img {
+main .recruit .recruit-content .recruit-img {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform .6s, opacity .6s;
+}
+
+main .recruit .recruit-content .recruit-img img {
   width: 100%;
 }
 
@@ -1004,6 +1060,7 @@ main .contact .contact-title h2 {
 
 main .contact .contact-title p {
   margin-top: -4px;
+  font-family: "Playfair Display", serif;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
 }
 
@@ -1026,7 +1083,7 @@ main .contact .sp-contact {
 
 main .contact .contact-content {
   position: relative;
-  width: min(100% - 40px, 550px);
+  width: min(100% - 100px, 550px);
   margin-top: 32px;
   margin-inline: auto;
   padding: 20px 0;
@@ -1063,10 +1120,11 @@ main .contact .contact-content::after {
 }
 
 main .contact .contact-content p {
-  width: min(100% - 40px, 400px);
+  width: min(100% - 40px, 460px);
   margin-inline: auto;
   font-family: "Shippori Mincho", serif;
   font-size: 1.25rem;
+  letter-spacing: 2px;
 }
 
 main .contact .contact-content p+p {
@@ -1074,7 +1132,7 @@ main .contact .contact-content p+p {
 }
 
 main .contact .contact-btn {
-  width: min(100% - 40px, 450px);
+  width: min(100% - 120px, 450px);
   margin: 32px auto 0;
   font-family: "myfont1";
   font-size: 1.5rem;
@@ -1223,11 +1281,15 @@ footer .footer-main .footer-logo .footer-logo-name {
 }
 
 footer .footer-main .footer-logo .footer-logo-name a {
+  font-family: "M PLUS 2", sans-serif;
+  font-weight: 600;
   font-size: 2.25rem;
+  line-height: 40px;
+  white-space: nowrap;
 }
 
-footer .footer-main .footer-logo .footer-logo-name a img {
-  vertical-align: middle;
+footer .footer-main .footer-logo .footer-logo-name a span {
+  font-size: 1.875rem;
 }
 
 footer .footer-main .footer-logo .footer-logo-address {
@@ -1248,17 +1310,17 @@ footer .footer-copy {
 /*=======================================================================
 media
 =======================================================================*/
-@media screen and (max-width:1180px) {
+@media screen and (max-width:980px) {
   main .history .history-content .pc-since {
-    display: none;
+    font-size: 10rem;
   }
 
-  main .history .history-content .sp-since {
-    display: block;
+  main .history .history-content .pc-since span {
+    font-size: 7rem;
   }
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:900px) {
   header .header-menu {
     display: none;
   }
@@ -1270,52 +1332,64 @@ media
   header #mask {
     display: block;
   }
-}
 
-@media screen and (max-width:900px) {
-  main .about .about-main {
+  main .about .about-main>h3 {
+    display: block;
+  }
+
+  main .about .about-main .about-block {
     flex-direction: column-reverse;
   }
 
-  main .about .about-main>div {
+  main .about .about-main .about-block .about-content h3 {
+    display: none;
+  }
+
+  main .about .about-main .about-block {
+    gap: 0px;
+    margin-top: 8px;
+  }
+
+  main .about .about-main .about-block>div {
     width: 100%;
   }
 
-  main .about .about-main .about-content h3 {
-    font-size: 2rem;
-    text-align: center;
+  main .about .about-main .about-block .about-content .about-text {
+    margin-top: 8px;
   }
 
-  main .about .about-content .about-text {
-    text-align: center;
-  }
-
-  main .about .about-content .about-btn {
+  main .about .about-block .about-content .about-btn {
     margin-inline: auto;
+    margin-top: 24px;
   }
 
-  main .service .service-main {
+  main .service .service-main>h3 {
+    display: block;
+  }
+
+  main .service .service-main .service-block {
     flex-direction: column-reverse;
   }
 
-  main .service .service-main>div {
+  main .service .service-main .service-block>div {
     width: 100%;
   }
 
-  main .service .service-main .service-content h3 {
-    font-size: 2rem;
-    text-align: center;
+  main .service .service-main .service-block .service-content h3 {
+    display: none;
   }
 
-  main .service .service-content .service-text {
-    text-align: center;
+  main .service .service-main .service-block {
+    gap: 0px;
+    margin-top: 8px;
   }
 
-  main .service .service-main .service-img img:nth-child(2) {
-    position: absolute;
-    width: 50%;
-    right: 0;
-    bottom: 0;
+  main .service .service-main .service-block>div {
+    width: 100%;
+  }
+
+  main .service .service-main .service-block .service-content .service-text {
+    margin-top: 8px;
   }
 
   main .recruit .recruit-content {
@@ -1326,24 +1400,31 @@ media
     width: 100%;
   }
 
-  main .recruit .recruit-content .recruit-text {
-    text-align: center;
+  main .recruit .recruit-content {
+    gap: 0px;
+    margin-top: 24px;
+  }
+
+  main .recruit .recruit-content .recruit-text p {
+    margin-top: 8px;
   }
 
   main .recruit .recruit-content .recruit-btn {
+    margin-top: 24px;
     margin-inline: auto;
   }
-}
 
-@media screen and (max-width:780px) {
-  main .mainvisual .pc-p {
+  main .contact .pc-contact {
     display: none;
   }
 
-  main .mainvisual .sp-p {
+  main .contact .sp-contact {
     display: block;
   }
 
+}
+
+@media screen and (max-width:780px) {
   main .service .service-supply>div {
     margin-top: 16px;
     display: flex;
@@ -1351,7 +1432,10 @@ media
     gap: 24px;
   }
 
-  main .service .service-supply>div>div {
+  main .service .service-supply>div .service1,
+  main .service .service-supply>div .service2,
+  main .service .service-supply>div .service3,
+  main .service .service-supply>div .service4 {
     width: calc((100% - 24px) / 2);
   }
 
@@ -1362,33 +1446,281 @@ media
     gap: 16px;
   }
 
-  main .service .service-example>div>div {
+  main .service .service-example>div .example1,
+  main .service .service-example>div .example2,
+  main .service .service-example>div .example3 {
     width: 100%;
   }
 
-}
+  main .history .history-content .pc-since {
+    font-size: 5rem;
+  }
 
-@media screen and (max-width:660px) {
-  footer .footer-main .footer-logo .footer-logo-address {
-    display: block;
-    text-align: center;
+  main .history .history-content .pc-since span {
+    font-size: 3.125rem;
   }
 }
 
 @media screen and (max-width:600px) {
-  main .history .history-content .sp-since {
-    font-size: 12rem;
+  main .mainvisual .mainvisual-text .pc-p {
+    font-size: 2.125rem;
   }
 
-  main .history .history-content .sp-since span {
-    font-size: 7rem;
+  main .mainvisual .mainvisual-text .sub-p {
+    font-size: 1.25rem;
   }
 
-  main .contact .pc-contact {
+  main .service .service-supply>div>div p {
+    font-size: .75rem;
+  }
+
+  main .service .service-example>div>div p {
+    font-size: .75rem;
+  }
+
+  main .contact .contact-content p {
+    font-size: 1rem;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address {
+    display: block;
+    text-align: center;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address p:nth-child(2) {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  header h1 {
+    font-size: 1.125rem;
+    line-height: 20px;
+  }
+
+  header h1 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  header h1 span {
+    font-size: 1rem;
+  }
+
+  main .mainvisual .square1 {
+    top: 5px;
+    right: 285px;
+    width: 180px;
+    height: 55px;
+    clip-path: polygon(0 0,
+        83% 0,
+        100% 100%,
+        17% 100%);
+  }
+
+  main .mainvisual .mainvisual-img1 {
+    top: 75px;
+    right: 185px;
+    width: 240px;
+    height: 160px;
+    clip-path: polygon(0 0,
+        62% 0,
+        100% 100%,
+        38% 100%);
+  }
+
+  main .mainvisual .mainvisual-img2 {
+    top: 390px;
+    right: 8px;
+    width: 240px;
+    height: 180px;
+    clip-path: polygon(0 0,
+        56% 0,
+        100% 100%,
+        44% 100%);
+  }
+
+  main .mainvisual .mainvisual-img3 {
+    top: 15px;
+    right: -43px;
+    width: 330px;
+    height: 240px;
+  }
+
+  main .mainvisual .square2 {
+    top: 425px;
+    right: -263px;
+    width: 330px;
+    height: 240px;
+  }
+
+  main .about .about-title {
+    width: min(100% - 80px, 1120px);
+  }
+
+  main .about .about-title img {
+    left: -20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  main .about .about-title h2 {
+    font-size: 1.5rem;
+  }
+
+  main .about .about-title p {
+    margin-top: 0px;
+    font-size: .625rem;
+  }
+
+  main .about .about-main>h3 {
+    font-size: 1.25rem;
+  }
+
+  main .about .about-main .about-block .about-content .about-text p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  main .service .service-title {
+    width: min(100% - 80px, 1120px);
+  }
+
+  main .service .service-title img {
+    left: -20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  main .service .service-title h2 {
+    font-size: 1.5rem;
+  }
+
+  main .service .service-title p {
+    margin-top: 0px;
+    font-size: .625rem;
+  }
+
+  main .service .service-main>h3 {
+    font-size: 1.25rem;
+  }
+
+  main .service .service-main .service-block .service-content .service-text p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  main .history {
+    background: url(sp-history.jpg);
+  }
+
+  main .history .history-title p {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+  }
+
+  main .history .pc-history-text {
     display: none;
   }
 
-  main .contact .sp-contact {
+  main .history .sp-history-text {
     display: block;
+  }
+
+  main .recruit .recruit-title {
+    width: min(100% - 80px, 1120px);
+  }
+
+  main .recruit .recruit-title img {
+    left: -20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  main .recruit .recruit-title h2 {
+    font-size: 1.5rem;
+  }
+
+  main .recruit .recruit-title p {
+    margin-top: 0px;
+    font-size: .625rem;
+  }
+
+  main .recruit .recruit-content .recruit-text p {
+    font-size: 1rem;
+  }
+
+  main .contact .contact-title {
+    width: min(100% - 80px, 1120px);
+  }
+
+  main .contact .contact-title img {
+    left: -20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  main .contact .contact-title h2 {
+    font-size: 1.5rem;
+  }
+
+  main .contact .contact-title p {
+    margin-top: 0px;
+    font-size: .625rem;
+  }
+
+  main .contact .sp-contact {
+    font-size: 1rem;
+  }
+
+  main .contact .contact-content p {
+    width: 280px;
+    font-size: .75rem;
+  }
+
+  main .contact .contact-btn {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 24px 0 16px;
+  }
+
+  footer .footer-main .footer-menu ul {
+    display: block;
+  }
+  
+  footer .footer-main .footer-menu ul li {
+    margin-inline: auto;
+  }
+
+  footer .footer-main .footer-menu ul .footer-service::before {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-service::after {
+    background: transparent;
+  }
+  
+  footer .footer-main .footer-menu ul .footer-contact::before {
+    background: transparent;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a {
+    font-size: 1.25rem;
+    line-height: 20px;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-name a img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  footer .footer-main .footer-logo .footer-logo-name a span {
+    font-size: 1rem;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address {
+    font-size: .625rem;
   }
 }
