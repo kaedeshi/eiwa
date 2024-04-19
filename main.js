@@ -142,38 +142,38 @@
   });
 
 
-  const check1 = document.getElementById('check1');
-  const check2 = document.getElementById('check2');
-  const check3 = document.getElementById('check3');
-  const check4 = document.getElementById('check4');
-  const check5 = document.getElementById('check5');
-  const check6 = document.getElementById('check6');
-  const check7 = document.getElementById('check7');
-  const contactBtn = document.getElementById('contact-btn');
+  // const check1 = document.getElementById('check1');
+  // const check2 = document.getElementById('check2');
+  // const check3 = document.getElementById('check3');
+  // const check4 = document.getElementById('check4');
+  // const check5 = document.getElementById('check5');
+  // const check6 = document.getElementById('check6');
+  // const check7 = document.getElementById('check7');
+  // const contactBtn = document.getElementById('contact-btn');
 
 
-  contactBtn.classList.remove('show');
-  update();
+  // contactBtn.classList.remove('show');
+  // update();
 
-  check1.addEventListener("input", update);
-  check2.addEventListener("input", update);
-  check3.addEventListener("input", update);
-  check4.addEventListener("input", update);
-  check5.addEventListener("input", update);
-  check6.addEventListener("input", update);
-  check7.addEventListener("change", update);
+  // check1.addEventListener("input", update);
+  // check2.addEventListener("input", update);
+  // check3.addEventListener("input", update);
+  // check4.addEventListener("input", update);
+  // check5.addEventListener("input", update);
+  // check6.addEventListener("input", update);
+  // check7.addEventListener("change", update);
 
-  function update() {
-    let isRequired2 = check2.checkVisibility();
-    let isRequired3 = check3.checkVisibility();
-    let isRequired4 = check4.checkVisibility();
-    let isRequired5 = check5.checkVisibility();
-    let isRequired6 = check6.checkVisibility();
-    let isRequired7 = check7.checkVisibility();
+  // function update() {
+  //   let isRequired2 = check2.checkVisibility();
+  //   let isRequired3 = check3.checkVisibility();
+  //   let isRequired4 = check4.checkVisibility();
+  //   let isRequired5 = check5.checkVisibility();
+  //   let isRequired6 = check6.checkVisibility();
+  //   let isRequired7 = check7.checkVisibility();
 
-    if(check1.value !== '-- お問い合わせ種別を選択してください --' && isRequired2  && isRequired3  && isRequired4  && isRequired5  && isRequired6  && isRequired7) {
-      contactBtn.classList.add('show');
-    }
-  }
+  //   if(check1.value !== '-- お問い合わせ種別を選択してください --' && isRequired2  && isRequired3  && isRequired4  && isRequired5  && isRequired6  && isRequired7) {
+  //     contactBtn.classList.add('show');
+  //   }
+  // }
 
 }
