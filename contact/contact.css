@@ -811,22 +811,22 @@ media
     align-items: center;
     width: 100%;
     padding: 8px 0;
-    font-size: .875rem;
+    font-size: 1rem;
   }
 
   main .contact form .contact-form .type select {
     width: 100%;
-    font-size: .875rem;
+    font-size: 1rem;
   }
   
   main .contact form .contact-form .type input {
     width: 100%;
-    font-size: .875rem;
+    font-size: 1rem;
   }
   
   main .contact form .contact-form .type textarea {
     width: 100%;
-    font-size: .875rem;
+    font-size: 1rem;
   }
 
   main .contact form .contact-form .type .sp-checkbox {

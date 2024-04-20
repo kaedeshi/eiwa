@@ -853,6 +853,46 @@ main .history {
   z-index: -3;
 }
 
+main .history .inner  {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0);
+  z-index: -3;
+}
+
+main .history .inner .sp-since {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "myfont1";
+  font-size: 5rem;
+  color: #fff;
+  white-space: nowrap;
+  opacity: .1;
+  z-index: -2;
+}
+
+main .history .inner .sp-since span {
+  font-size: 3.125rem;
+}
+
+main .history .history-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(sp-history.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -3;
+}
+
 main .history .history-content {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
@@ -1530,8 +1570,8 @@ media
   }
 
   main .mainvisual .mainvisual-img2 {
-    top: 390px;
-    right: -6px;
+    top: 410px;
+    right: -16px;
     width: 240px;
     height: 200px;
     clip-path: polygon(0 0,
@@ -1611,12 +1651,26 @@ media
   }
 
   main .history {
-    background: url(sp-history.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    height: 790px;
+    overflow: hidden;
+    background: none;
     padding: 80px 0;
+    z-index: 0;
   }
+  
+  main .history .inner  {
+    display: block;
+  }
+
+  main .history .inner .sp-since {
+    display: block;
+  }
+  
+  main .history .history-content .pc-since {
+    display: none;
+  }
+
 
   main .history .history-title p {
     font-size: 1.75rem;
