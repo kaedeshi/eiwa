@@ -485,7 +485,7 @@ main .recruit-content h3::before {
 }
 
 main .recruit-content dl {
-  width: min(100% - 32px, 1120px);
+  width: 100%;
   margin-inline: auto;
   margin-top: 24px;
   display: flex;
@@ -495,6 +495,7 @@ main .recruit-content dl {
 main .recruit-content dl dt {
   width: 30%;
   padding: 28px;
+  background: pink;
   font-family: 'myfont2';
   font-size: 1.125rem;
   border-bottom: 1px solid #878787;
@@ -845,10 +846,12 @@ media
   }
   
   main .recruit-content dl dt {
+    padding: 20px 12px;
     font-size: .875rem;
   }
   
   main .recruit-content dl dd {
+    padding: 20px 12px;
     font-size: .875rem;
   }
 
