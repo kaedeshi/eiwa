@@ -16,7 +16,11 @@
     border2.classList.toggle('show');
     menu.classList.toggle('show');
     mask.classList.toggle('show');
-    body.style.overflow = 'hidden';
+    if(mask.classList.contains('show') == true) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = null;
+    }
   });
 
   mask.addEventListener('click', () => {
@@ -25,7 +29,11 @@
     border2.classList.toggle('show');
     menu.classList.toggle('show');
     mask.classList.remove('show');
-    body.style.overflow = 'hidden';
+    if(mask.classList.contains('show') == true) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = null;
+    }
   });
 
   lists.forEach((list) => {
@@ -35,7 +43,11 @@
       border2.classList.toggle('show');
       menu.classList.toggle('show');
       mask.classList.toggle('show');
-      body.style.overflow = 'hidden';
+      if(mask.classList.contains('show') == true) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = null;
+      }
     });
   });
 
