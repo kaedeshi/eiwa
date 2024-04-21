@@ -903,11 +903,13 @@ media
   }
 
   footer .footer-main .footer-menu ul {
-    display: block;
+    font-size: .875rem;
+    flex-wrap: wrap
   }
   
   footer .footer-main .footer-menu ul li {
     margin-inline: auto;
+    width: calc(100% /2);
   }
 
   footer .footer-main .footer-menu ul .footer-service::before {

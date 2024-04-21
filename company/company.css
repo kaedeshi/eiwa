@@ -40,6 +40,11 @@
   src: url("../font/GenEiGothicN-SemiBold.otf") format(opentype);
 }
 
+@font-face {
+  font-family: "myfont9";
+  src: url("../font/nagayama_kai08.otf") format(opentype);
+}
+
 /*=======================================================================
 common
 =======================================================================*/
@@ -470,6 +475,7 @@ main .comment .comment-content .comment-text2 {
 
 main .comment .comment-content .comment-text2 p span {
   font-size: 1.75rem;
+  font-family: "myfont9";
 }
 
 
@@ -558,10 +564,47 @@ main .company dl dd {
   border-bottom: 1px solid #111;
 }
 
-main .company dl dd iframe {
+main .company dl .map-dt {
+  border-bottom: none;
+}
+
+main .company dl .pc-map {
+  width: 70%;
+  padding: 28px;
+  font-family: "myfont2";
+  font-size: 1.125rem;
+  border-bottom: none;
+}
+
+main .company dl .pc-map iframe {
   width: 100%;
   margin-top: 24px;
 }
+
+main .company dl .sp-map {
+  display: none;
+  width: 70%;
+  padding: 20px 12px;
+  font-family: "myfont2";
+  font-size: .875rem;
+  border-bottom: none;
+}
+
+main .company dl div {
+  display: none;
+  width: 100%;
+  padding: 12px;
+}
+
+main .company dl div iframe {
+  width: 100%;
+}
+
+main .company dl .money-dt,
+main .company dl .money-dd {
+  border-top: 1px solid #111;
+}
+
 
 /*=======================================================================
 footer
@@ -806,22 +849,22 @@ media
   }
 
   main .comment .comment-content .comment-text1 div {
-    background-size: 100% 3rem;
-    line-height: 3rem;
+    background-size: 100% 2rem;
+    line-height: 2rem;
   }
 
   main .comment .comment-content .comment-text1 div p {
     margin-top: 16px;
-    font-size: .875rem;
-    line-height: 3rem;
+    font-size: .75rem;
+    line-height: 2rem;
   }
 
   main .comment .comment-content .comment-text2 {
-    font-size: .875rem;
+    font-size: .75rem;
   }
 
   main .comment .comment-content .comment-text2 p span {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   main .company .company-title {
@@ -844,16 +887,28 @@ media
   }
 
   main .company dl dt {
-    padding: 20px 28px;
+    padding: 20px 12px;
     font-size: .875rem;
   }
 
   main .company dl dd {
-    padding: 20px 28px;
+    padding: 20px 12px;
     font-size: .875rem;
   }
 
-  main .company dl dd iframe {
+  main .company dl .pc-map {
+    display: none;
+  }
+
+  main .company dl .sp-map {
+    display: block;
+  }
+
+  main .company dl div {
+    display: block;
+  }
+
+  main .company dl div iframe {
     height: 200px;
   }
 
@@ -862,11 +917,13 @@ media
   }
 
   footer .footer-main .footer-menu ul {
-    display: block;
+    font-size: .875rem;
+    flex-wrap: wrap
   }
-
+  
   footer .footer-main .footer-menu ul li {
     margin-inline: auto;
+    width: calc(100% /2);
   }
 
   footer .footer-main .footer-menu ul .footer-service::before {

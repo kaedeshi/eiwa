@@ -1178,7 +1178,6 @@ main .contact .contact-btn {
   font-size: 1.5rem;
   color: #fff;
   background: #c85f48;
-  border-radius: 16px;
   text-align: center;
   cursor: pointer;
 }
@@ -1199,6 +1198,17 @@ main .contact .contact-btn img {
   top: 55%;
   left: 5%;
   transform: translateY(-50%);
+}
+
+main .contact .contact-btn a::before {
+  content: url(mail-icon.png);
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: calc(50% - 116px);
+  left: calc(5% - 116px);
+  transform: translateY(-50%);
+  scale: .1;
 }
 
 main .contact .contact-btn a::after {
@@ -1745,11 +1755,13 @@ media
   }
 
   footer .footer-main .footer-menu ul {
-    display: block;
+    font-size: .875rem;
+    flex-wrap: wrap
   }
   
   footer .footer-main .footer-menu ul li {
     margin-inline: auto;
+    width: calc(100% /2);
   }
 
   footer .footer-main .footer-menu ul .footer-service::before {

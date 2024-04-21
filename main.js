@@ -8,6 +8,7 @@
   const menu = document.getElementById('menu');
   const mask = document.getElementById('mask');
   const lists = document.querySelectorAll('#menu ul li');
+  const body = document.body;
 
   hamburger.addEventListener('click', () => {
     border1.classList.toggle('show');
@@ -15,6 +16,7 @@
     border2.classList.toggle('show');
     menu.classList.toggle('show');
     mask.classList.toggle('show');
+    body.style.overflow = 'hidden';
   });
 
   mask.addEventListener('click', () => {
@@ -23,6 +25,7 @@
     border2.classList.toggle('show');
     menu.classList.toggle('show');
     mask.classList.remove('show');
+    body.style.overflow = 'hidden';
   });
 
   lists.forEach((list) => {
@@ -32,7 +35,7 @@
       border2.classList.toggle('show');
       menu.classList.toggle('show');
       mask.classList.toggle('show');
-
+      body.style.overflow = 'hidden';
     });
   });
 
