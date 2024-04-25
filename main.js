@@ -84,7 +84,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target3.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {
@@ -93,7 +93,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target4.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {
@@ -102,7 +102,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target5.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {
@@ -111,7 +111,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target6.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {
@@ -120,7 +120,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target7.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {
@@ -129,7 +129,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target8.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {
@@ -138,7 +138,7 @@
   });
 
   window.addEventListener('scroll', () => {
-    let targetPosition = window.innerHeight * 2 / 3;
+    let targetPosition = window.innerHeight * 3 / 4;
     let targetItemPosition3 = target9.getBoundingClientRect().top;
 
     if (targetItemPosition3 < targetPosition) {

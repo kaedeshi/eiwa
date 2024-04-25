@@ -467,6 +467,10 @@ main .comment .comment-content .comment-text1 div p {
   padding: 0 8px;
 }
 
+main .comment .comment-content .comment-text1 div p span {
+  display: inline-block;
+}
+
 main .comment .comment-content .comment-text2 {
   margin-top: 24px;
   font-family: "myfont1";
@@ -603,6 +607,10 @@ main .company dl div iframe {
 main .company dl .money-dt,
 main .company dl .money-dd {
   border-top: 1px solid #111;
+}
+
+main .company dl dd span {
+  display: inline-block;
 }
 
 
@@ -842,6 +850,18 @@ media
 
   main .comment .comment-content {
     margin-top: -60px;
+    padding: 60px 20px;
+  }
+
+  main .comment .comment-content {
+    position: relative;
+    width: min(100% - 40px, 1120px);
+    margin-inline: auto;
+    margin-top: 32px;
+    
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    box-shadow: 3px 3px 2px #ccc;
   }
 
   main .comment .comment-content .comment-text1 h3 {

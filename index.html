@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="index.html" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -66,10 +67,12 @@
       </div>
 
       <div class="square1"></div>
-      <div class="mainvisual-img1"></div>
-      <div class="mainvisual-img2"></div>
-      <div class="mainvisual-img3"></div>
+      <div class="square11"></div>
+      <div class="mainvisual-img1"  loading="lazy"></div>
+      <div class="mainvisual-img2" loading="lazy"></div>
+      <div class="mainvisual-img3" loading="lazy"></div>
       <div class="square2"></div>
+      <div class="square21"></div>
     </section>
 
     <section class="about" id="about">
@@ -246,9 +249,8 @@
         <p>✔️仕事のご依頼など</p>
       </div>
       <div class="contact-btn">
-        <a href="contact/index.html">
-          お問い合わせはこちら
-        </a>
+        <a href="contact/index.html">お問い合わせはこちら</a>
+         <div class="about-btn-shadow"></div>
       </div>
     </section>
   </main>

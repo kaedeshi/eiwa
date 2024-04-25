@@ -74,9 +74,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: min(100% - 40px, 1440px);
   height: 72px;
-  padding: 0 20px;
+  margin-inline: auto;
 }
 
 header h1 {
@@ -1172,6 +1172,7 @@ main .contact .contact-content p+p {
 }
 
 main .contact .contact-btn {
+  position: relative;
   width: min(100% - 120px, 450px);
   margin: 32px auto 0;
   font-family: "myfont1";
@@ -1180,10 +1181,16 @@ main .contact .contact-btn {
   background: #c85f48;
   text-align: center;
   cursor: pointer;
+  transition: transform .3s, opacity .3s;
 }
 
 main .contact .contact-btn:hover {
-  opacity: .7;
+  opacity: .6;
+}
+
+main .contact .contact-btn:active {
+  opacity: .4;
+  transform: translate(2px, 2px);
 }
 
 main .contact .contact-btn a {
@@ -1219,6 +1226,22 @@ main .contact .contact-btn a::after {
   transform: translateY(-50%);
   color: #fff;
 }
+
+main .contact .contact-btn .contact-btn-shadow {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: min(100vw - 120px, 450px);
+  height: 78px;
+  border: 1px solid #c85f48;
+  transition: transform .3s;
+  pointer-events: none;
+}
+
+main .contact .contact-btn:active .contact-btn-shadow {
+  transform: translate(-2px, -2px);
+}
+
 
 
 /*=======================================================================
@@ -1360,6 +1383,32 @@ footer .footer-copy {
 /*=======================================================================
 media
 =======================================================================*/
+@media screen and (min-width:1440px) {
+  main .mainvisual .mainvisual-text {
+    right: calc(50% + 137px);
+  }
+
+  main .mainvisual .mainvisual-img1 {
+    left: calc(50% - 110px);
+  }
+
+  main .mainvisual .mainvisual-img2 {
+    left: calc(50% + 52px);
+  }
+
+  main .mainvisual .mainvisual-img3 {
+    left: calc(50% + 103px);
+  }
+  
+  main .mainvisual .square1 {
+    left: calc(50% - 295px);
+  }
+
+  main .mainvisual .square2 {
+    left: calc(50% + 375px);
+  }
+}
+
 @media screen and (max-width:980px) {
   main .history .history-content .pc-since {
     font-size: 10rem;
@@ -1748,6 +1797,10 @@ media
 
   main .contact .contact-btn {
     font-size: 1rem;
+  }
+
+  main .contact .contact-btn .contact-btn-shadow {
+    height: 71px;
   }
 
   footer {
