@@ -369,7 +369,7 @@ main .mainvisual .mainvisual-text .pc-p {
 }
 
 main .mainvisual .mainvisual-text .sub-p {
-  margin-top: 36px;
+  margin-top: 34px;
   font-size: 2.25rem;
   white-space: nowrap;
   opacity: 0;
@@ -512,7 +512,7 @@ main .mainvisual .square2 {
 about
 =======================================================================*/
 main .about {
-  padding: 120px 0;
+  padding: 110px 0 66px;
 }
 
 main .about .about-title {
@@ -557,7 +557,7 @@ main .about .about-main .about-block {
   gap: 32px;
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
-  margin-top: 32px;
+  margin-top: 52px;
 }
 
 main .about .about-main .about-block>div {
@@ -567,13 +567,13 @@ main .about .about-main .about-block>div {
 main .about .about-main .about-block .about-content h3 {
   font-family: "myfont1";
   font-size: 2.25rem;
-  line-height: 1.5;
+  line-height: 1.3;
   letter-spacing: 1px;
 }
 
 main .about .about-main .about-block .about-content .about-text {
   font-family: "myfont2";
-  margin-top: 32px;
+  margin-top: 48px;
 }
 
 main .about .about-main .about-block .about-content .about-text p {
@@ -582,13 +582,13 @@ main .about .about-main .about-block .about-content .about-text p {
 }
 
 main .about .about-main .about-block .about-content .about-text p+p {
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 main .about .about-block .about-content .about-btn {
   position: relative;
   width: 240px;
-  margin-top: 32px;
+  margin-top: 40px;
   font-family: "myfont1";
   font-size: 1.125rem;
   color: #fff;
@@ -655,7 +655,7 @@ service
 =======================================================================*/
 main .service {
   position: relative;
-  padding: 120px 0;
+  padding: 110px 0 120px;
 }
 
 main .service .service-background {
@@ -708,7 +708,7 @@ main .service .service-main .service-block {
   gap: 32px;
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
-  margin-top: 32px;
+  margin-top: 52px;
 }
 
 main .service .service-main .service-block>div {
@@ -718,13 +718,13 @@ main .service .service-main .service-block>div {
 main .service .service-main .service-block .service-content h3 {
   font-family: "myfont1";
   font-size: 2.25rem;
-  line-height: 1.5;
+  line-height: 1.3;
   letter-spacing: 1px;
 }
 
 main .service .service-main .service-block .service-content .service-text {
   font-family: "myfont2";
-  margin-top: 32px;
+  margin-top: 48px;
 }
 
 main .service .service-main .service-block .service-content .service-text p {
@@ -733,7 +733,7 @@ main .service .service-main .service-block .service-content .service-text p {
 }
 
 main .service .service-main .service-block .service-content .service-text p+p {
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 main .service .service-main .service-img {
@@ -748,7 +748,7 @@ main .service .service-main .service-img img {
 
 main .service .service-supply {
   width: min(100% - 40px, 980px);
-  margin-top: 48px;
+  margin-top: 120px;
   margin-inline: auto;
   text-align: center;
 }
@@ -760,9 +760,9 @@ main .service .service-supply>p {
 }
 
 main .service .service-supply>div {
-  margin-top: 16px;
+  margin-top: 28px;
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 main .service .service-supply>div .service1,
@@ -794,13 +794,13 @@ main .service .service-supply>div>div div img {
 }
 
 main .service .service-supply>div>div p {
-  margin-top: 8px;
+  margin-top: 16px;
   font-size: 1.125rem;
 }
 
 main .service .service-example {
   width: min(100% - 40px, 980px);
-  margin-top: 32px;
+  margin-top: 64px;
   margin-inline: auto;
   text-align: center;
 }
@@ -812,7 +812,7 @@ main .service .service-example>p {
 }
 
 main .service .service-example>div {
-  margin-top: 16px;
+  margin-top: 28px;
   display: flex;
   gap: 16px;
 }
@@ -834,7 +834,7 @@ main .service .service-example>div>div div img {
 }
 
 main .service .service-example>div>div p {
-  margin-top: 8px;
+  margin-top: 16px;
   font-size: 1.125rem;
 }
 
@@ -849,7 +849,7 @@ main .history {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  padding: 120px 0;
+  padding: 112px 0;
   z-index: -3;
 }
 
@@ -923,7 +923,11 @@ main .history .history-title p {
 }
 
 main .history .pc-history-text {
-  margin-top: 48px;
+  margin-top: 70px;
+}
+
+main .history .pc-history-text p+p {
+  margin-top: 60px;
 }
 
 main .history .pc-history-text p {
@@ -954,7 +958,7 @@ recruit
 =======================================================================*/
 main .recruit {
   position: relative;
-  padding: 120px 0;
+  padding: 110px 0 152px;
 }
 
 main .recruit .recruit-background {
@@ -992,8 +996,7 @@ main .recruit .recruit-title p {
 
 main .recruit .recruit-content {
   display: flex;
-  align-items: center;
-  gap: 32px;
+  gap: 52px;
   width: min(100% - 40px, 1120px);
   margin-top: 32px;
   margin-inline: auto;
@@ -1013,7 +1016,7 @@ main .recruit .recruit-content .recruit-btn {
   position: relative;
   font-size: 1.125rem;
   width: 240px;
-  margin-top: 32px;
+  margin-top: 78px;
   color: #fff;
   font-family: "myfont1";
   background: #c85f48;
@@ -1075,7 +1078,7 @@ main .recruit .recruit-content .recruit-img img {
 contact
 =======================================================================*/
 main .contact {
-  padding: 120px 0;
+  padding: 110px 0 180px;
 }
 
 main .contact .contact-title {
@@ -1105,7 +1108,7 @@ main .contact .contact-title p {
 }
 
 main .contact .pc-contact {
-  margin-top: 8px;
+  margin-top: 52px;
   text-align: center;
   font-family: "myfont2";
   font-size: 1.25rem;
@@ -1114,7 +1117,7 @@ main .contact .pc-contact {
 
 main .contact .sp-contact {
   display: none;
-  margin-top: 8px;
+  margin-top: 52px;
   text-align: center;
   font-family: "myfont2";
   font-size: 1.25rem;
@@ -1124,7 +1127,7 @@ main .contact .sp-contact {
 main .contact .contact-content {
   position: relative;
   width: min(100% - 100px, 550px);
-  margin-top: 32px;
+  margin-top: 78px;
   margin-inline: auto;
   padding: 20px 0;
   color: #c85f48;
@@ -1174,7 +1177,7 @@ main .contact .contact-content p+p {
 main .contact .contact-btn {
   position: relative;
   width: min(100% - 120px, 450px);
-  margin: 32px auto 0;
+  margin: 36px auto 0;
   font-family: "myfont1";
   font-size: 1.5rem;
   color: #fff;
@@ -1249,7 +1252,7 @@ footer
 =======================================================================*/
 footer {
   font-family: "myfont1";
-  padding: 60px 0 16px;
+  padding: 30px 0 16px;
   color: #ffffff;
   background: #104383;
 }
@@ -1346,7 +1349,7 @@ footer .footer-main .footer-menu ul .footer-contact::before {
 }
 
 footer .footer-main .footer-logo {
-  margin-top: 32px;
+  margin-top: 46px;
 }
 
 footer .footer-main .footer-logo .footer-logo-name {
@@ -1369,7 +1372,7 @@ footer .footer-main .footer-logo .footer-logo-address {
   display: flex;
   gap: 24px;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 20px;
   font-size: 1.125rem;
   text-align: center;
 }
@@ -1377,7 +1380,7 @@ footer .footer-main .footer-logo .footer-logo-address {
 footer .footer-copy {
   text-align: center;
   font-size: .85rem;
-  margin-top: 36px;
+  margin-top: 24px;
 }
 
 /*=======================================================================

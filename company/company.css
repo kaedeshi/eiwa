@@ -330,7 +330,7 @@ mainvisual
 main .mainvisual {
   position: relative;
   width: 100vw;
-  height: calc(300px - 72px);
+  height: 278px;
   background-image: url(company.jpg);
   background-size: cover;
   background-position: center 70%;
@@ -351,7 +351,7 @@ main .mainvisual .mainvisual-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140px;
+  height: 142px;
   width: min(100% - 90px, 450px);
   text-align: center;
   background: rgba(255, 255, 255, .7);
@@ -364,7 +364,7 @@ main .mainvisual .mainvisual-text div .main-p {
 }
 
 main .mainvisual .mainvisual-text div .sub-p {
-  margin-top: -4px;
+  margin-top: 6px;
   font-family: "Playfair Display", serif;
   font-size: 1.25rem;
   white-space: nowrap;
@@ -374,7 +374,7 @@ main .mainvisual .mainvisual-text div .sub-p {
 message
 =======================================================================*/
 main .comment {
-  padding: 80px 0 60px;
+  padding: 124px 0;
 }
 
 main .comment .comment-title {
@@ -395,7 +395,7 @@ main .comment .comment-content {
   width: min(100% - 40px, 1120px);
   margin-inline: auto;
   margin-top: 32px;
-  padding: 60px 40px;
+  padding: 70px 40px;
   border-right: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   box-shadow: 3px 3px 2px #ccc;
@@ -453,17 +453,17 @@ main .comment .comment-content .comment-text1 .sp-h3 {
 main .comment .comment-content .comment-text1 div {
   background: #fff;
   background-image: linear-gradient(180deg, #ddd9d9 1px, transparent 1px);
-  background-size: 100% 4rem;
-  line-height: 4rem;
+  background-size: 100% 3.5rem;
+  line-height: 3.5rem;
   padding-bottom: 1px;
 }
 
 main .comment .comment-content .comment-text1 div p {
   position: relative;
-  margin-top: 32px;
+  margin-top: 56px;
   font-family: "myfont1";
   font-size: 1.15rem;
-  line-height: 4rem;
+  line-height: 3.5rem;
   padding: 0 8px;
 }
 
@@ -472,7 +472,7 @@ main .comment .comment-content .comment-text1 div p span {
 }
 
 main .comment .comment-content .comment-text2 {
-  margin-top: 24px;
+  margin-top: 26px;
   font-family: "myfont1";
   text-align: end;
 }
@@ -488,7 +488,7 @@ company
 =======================================================================*/
 main .company {
   position: relative;
-  padding: 80px 0 60px;
+  padding: 124px 0;
   overflow: hidden;
 }
 
@@ -547,7 +547,7 @@ main .company .company-content {
 main .company dl {
   width: min(100% - 32px, 1120px);
   margin-inline: auto;
-  margin-top: 24px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -619,7 +619,7 @@ footer
 =======================================================================*/
 footer {
   font-family: "myfont1";
-  padding: 60px 0 16px;
+  padding: 30px 0 16px;
   color: #ffffff;
   background: #104383;
 }
@@ -716,7 +716,7 @@ footer .footer-main .footer-menu ul .footer-contact::before {
 }
 
 footer .footer-main .footer-logo {
-  margin-top: 32px;
+  margin-top: 46px;
 }
 
 footer .footer-main .footer-logo .footer-logo-name {
@@ -739,7 +739,7 @@ footer .footer-main .footer-logo .footer-logo-address {
   display: flex;
   gap: 24px;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 20px;
   font-size: 1.125rem;
   text-align: center;
 }
@@ -747,7 +747,7 @@ footer .footer-main .footer-logo .footer-logo-address {
 footer .footer-copy {
   text-align: center;
   font-size: .85rem;
-  margin-top: 36px;
+  margin-top: 24px;
 }
 
 /*=======================================================================
@@ -849,19 +849,8 @@ media
   }
 
   main .comment .comment-content {
-    margin-top: -60px;
+    margin-top: -30px;
     padding: 60px 20px;
-  }
-
-  main .comment .comment-content {
-    position: relative;
-    width: min(100% - 40px, 1120px);
-    margin-inline: auto;
-    margin-top: 32px;
-    
-    border-right: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
-    box-shadow: 3px 3px 2px #ccc;
   }
 
   main .comment .comment-content .comment-text1 h3 {
