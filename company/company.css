@@ -609,6 +609,10 @@ main .company dl .money-dd {
   border-top: 1px solid #111;
 }
 
+main .company dl dt span {
+  display: inline-block;
+}
+
 main .company dl dd span {
   display: inline-block;
 }
