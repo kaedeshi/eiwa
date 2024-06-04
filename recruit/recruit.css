@@ -408,108 +408,6 @@ main .recruit-text div p span {
 }
 
 /*=======================================================================
-recruit-personal
-=======================================================================*/
-/* main .recruit-personal {
-  background: rgba(217, 217, 217, .3);
-}
-
-main .recruit-personal>div {
-  width: min(100% - 40px, 1120px);
-  margin-inline: auto;
-  padding: 60px 0;
-}
-
-main .recruit-personal>div h3 {
-  position: relative;
-  font-family: 'myfont1';
-  font-size: 2rem;
-  text-align: center;
-}
-
-main .recruit-personal>div h3::before {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 1px;
-  background: #c85f48;
-}
-
-main .recruit-personal>div>div {
-  margin-top: 48px;
-  display: flex;
-  gap: 32px;
-}
-
-main .recruit-personal>div>div div {
-  width: calc((100% - 32px) / 2);
-}
-
-main .recruit-personal>div>div div img {
-  width: 100%;
-}
-
-main .recruit-personal>div>div .recruit-personal-text {
-  font-family: 'myfont2';
-  font-size: 1.125rem;
-} */
-
-/*=======================================================================
-recruit-content
-=======================================================================*/
-main .recruit-content {
-  width: min(100% - 40px, 1120px);
-  margin-inline: auto;
-  padding: 104px 0;
-}
-
-main .recruit-content h3 {
-  position: relative;
-  font-family: 'myfont1';
-  font-size: 2rem;
-  text-align: center;
-}
-
-main .recruit-content h3::before {
-  content: '';
-  position: absolute;
-  bottom: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 1px;
-  background: #c85f48;
-}
-
-main .recruit-content dl {
-  width: 100%;
-  margin-inline: auto;
-  margin-top: 64px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-main .recruit-content dl dt {
-  width: 30%;
-  padding: 28px;
-  font-family: 'myfont2';
-  font-size: 1.125rem;
-  border-bottom: 1px solid #878787;
-}
-
-main .recruit-content dl dd {
-  width: 70%;
-  padding: 28px;
-  font-family: 'myfont2';
-  font-size: 1.125rem;
-  border-bottom: 1px solid #878787;
-}
-
-
-/*=======================================================================
 recruit-contact
 =======================================================================*/
 main .recruit-contact {
@@ -572,12 +470,12 @@ main .recruit-contact>div .recruit-entry div {
 }
 
 main .recruit-contact>div .recruit-entry div p:nth-child(1) {
-  font-size: 3rem;
+  font-family: 'myfont2';
+  font-size: 1.25rem;
 }
 
 main .recruit-contact>div .recruit-entry div p:nth-child(2) {
-  font-family: 'myfont2';
-  font-size: 1.25rem;
+  font-size: 3rem;
 }
 
 main .recruit-contact>div .recruit-entry .recruit-entry-btn {
@@ -868,11 +766,11 @@ media
   }
 
   main .recruit-contact>div .recruit-entry div p:nth-child(1) {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   main .recruit-contact>div .recruit-entry div p:nth-child(2) {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   
   main .recruit-contact>div .recruit-entry .recruit-entry-btn {

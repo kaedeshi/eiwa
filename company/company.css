@@ -425,13 +425,31 @@ main .comment .comment-title h2 {
   font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+  text-shadow: 
+  1px 1px 0px #fff,
+   -1px -1px 0px #fff,
+  -1px 1px 0px #fff,
+   1px -1px 0px #fff,
+  1px 0px 0px #fff, 
+  -1px 0px 0px #fff,
+  0px 1px 0px #fff, 
+  0px -1px 0px #fff
+  ;
 }
 
 main .comment .comment-title p {
   margin-top: -4px;
   font-family: "Playfair Display", serif;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+  text-shadow: 
+  1px 1px 1px #fff,
+   -1px -1px 1px #fff,
+  -1px 1px 1px #fff,
+   1px -1px 1px #fff,
+  1px 0px 1px #fff, 
+  -1px 0px 1px #fff,
+  0px 1px 1px #fff, 
+  0px -1px 1px #fff
+  ;
 }
 
 main .comment .comment-content {
@@ -526,13 +544,31 @@ main .company .company-title h2 {
   font-family: "myfont1";
   font-weight: bold;
   font-size: 2rem;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+  text-shadow: 
+  1px 1px 0px #d9d9d94d,
+   -1px -1px 0px rgba(217, 217, 217, .3),
+  -1px 1px 0px rgba(217, 217, 217, .3),
+   1px -1px 0px rgba(217, 217, 217, .3),
+  1px 0px 0px rgba(217, 217, 217, .3), 
+  -1px 0px 0px rgba(217, 217, 217, .3),
+  0px 1px 0px rgba(217, 217, 217, .3), 
+  0px -1px 0px rgba(217, 217, 217, .3)
+  ;
 }
 
 main .company .company-title p {
   margin-top: -4px;
   font-family: "Playfair Display", serif;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+  text-shadow: 
+  1px 1px 1px rgba(217, 217, 217, .3),
+   -1px -1px 1px rgba(217, 217, 217, .3),
+  -1px 1px 1px rgba(217, 217, 217, .3),
+   1px -1px 1px rgba(217, 217, 217, .3),
+  1px 0px 1px rgba(217, 217, 217, .3), 
+  -1px 0px 1px rgba(217, 217, 217, .3),
+  0px 1px 1px rgba(217, 217, 217, .3), 
+  0px -1px 1px rgba(217, 217, 217, .3)
+  ;
 }
 
 main .company .company-content {
