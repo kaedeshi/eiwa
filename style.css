@@ -355,6 +355,7 @@ main .mainvisual .mainvisual-text {
 main .mainvisual .mainvisual-text .pc-p {
   font-size: 4.25rem;
   white-space: nowrap;
+  line-height: 1.5;
   opacity: 0;
   transform: translateX(-100px);
   transition: all .3s;
@@ -1598,44 +1599,7 @@ media
 
 }
 
-@media screen and (max-width:780px) {
-  main .service .service-supply>div {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  main .service .service-supply>div .service1,
-  main .service .service-supply>div .service2,
-  main .service .service-supply>div .service3,
-  main .service .service-supply>div .service4 {
-    width: calc((100% - 24px) / 2);
-  }
-
-  main .service .service-example>div {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  main .service .service-example>div .example1,
-  main .service .service-example>div .example2,
-  main .service .service-example>div .example3 {
-    width: 100%;
-  }
-
-  main .history .history-content .pc-since {
-    font-size: 5rem;
-  }
-
-  main .history .history-content .pc-since span {
-    font-size: 3.125rem;
-  }
-}
-
-@media screen and (max-width:600px) {
+@media screen and (max-width:880px) {
   main .mainvisual .mainvisual-text .pc-p {
     font-size: 2.125rem;
   }
@@ -1643,44 +1607,10 @@ media
   main .mainvisual .mainvisual-text .sub-p {
     font-size: 1.25rem;
   }
-
-  main .service .service-supply>div>div p {
-    font-size: .75rem;
-  }
-
-  main .service .service-example>div>div p {
-    font-size: .75rem;
-  }
-
-  main .contact .contact-content p {
-    font-size: 1rem;
-  }
-
-  footer .footer-main .footer-logo .footer-logo-address {
-    display: block;
-    text-align: center;
-  }
-
-  footer .footer-main .footer-logo .footer-logo-address p:nth-child(2) {
-    margin-top: 8px;
-  }
+  
 }
 
-@media screen and (max-width:600px) {
-  header h1 {
-    font-size: 1.125rem;
-    line-height: 20px;
-  }
-
-  header h1 img {
-    width: 20px;
-    height: 20px;
-  }
-
-  header h1 span {
-    font-size: 1rem;
-  }
-
+@media screen and (max-width:780px) {
   main .mainvisual .square1 {
     top: 5px;
     right: 285px;
@@ -1727,6 +1657,127 @@ media
     width: 330px;
     height: 240px;
   }
+
+  main .service .service-supply>div {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  main .service .service-supply>div .service1,
+  main .service .service-supply>div .service2,
+  main .service .service-supply>div .service3,
+  main .service .service-supply>div .service4 {
+    width: calc((100% - 24px) / 2);
+  }
+
+  main .service .service-example>div {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  main .service .service-example>div .example1,
+  main .service .service-example>div .example2,
+  main .service .service-example>div .example3 {
+    width: 100%;
+  }
+
+  main .history .history-content .pc-since {
+    font-size: 5rem;
+  }
+
+  main .history .history-content .pc-since span {
+    font-size: 3.125rem;
+  }
+}
+
+@media screen and (max-width:600px) {
+  main .service .service-supply>div>div p {
+    font-size: .75rem;
+  }
+
+  main .service .service-example>div>div p {
+    font-size: .75rem;
+  }
+
+  main .contact .contact-content p {
+    font-size: 1rem;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address {
+    display: block;
+    text-align: center;
+  }
+
+  footer .footer-main .footer-logo .footer-logo-address p:nth-child(2) {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  header h1 {
+    font-size: 1.125rem;
+    line-height: 20px;
+  }
+
+  header h1 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  header h1 span {
+    font-size: 1rem;
+  }
+
+  /* main .mainvisual .square1 {
+    top: 5px;
+    right: 285px;
+    width: 180px;
+    height: 55px;
+    clip-path: polygon(0 0,
+        83% 0,
+        100% 100%,
+        17% 100%);
+  }
+
+  main .mainvisual .mainvisual-img1 {
+    top: 75px;
+    right: 185px;
+    width: 240px;
+    height: 160px;
+    clip-path: polygon(0 0,
+        62% 0,
+        100% 100%,
+        38% 100%);
+  }
+
+  main .mainvisual .mainvisual-img2 {
+    top: 410px;
+    right: -16px;
+    width: 240px;
+    height: 200px;
+    clip-path: polygon(0 0,
+        54% 0,
+        100% 100%,
+        46% 100%);
+  }
+
+  main .mainvisual .mainvisual-img3 {
+    top: 15px;
+    right: -43px;
+    width: 330px;
+    height: 240px;
+  }
+
+  main .mainvisual .square2 {
+    top: 425px;
+    right: -263px;
+    width: 330px;
+    height: 240px;
+  } */
 
   main .about .about-title {
     width: min(100% - 80px, 1120px);
