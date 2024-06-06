@@ -386,6 +386,10 @@ main .mainvisual .mainvisual-text .sub-p {
   }
 }
 
+main .mainvisual .mainvisual-text .sub-p span {
+  display: inline-block;
+}
+
 main .mainvisual .square1 {
   position: absolute;
   top: -300px;
@@ -1972,4 +1976,20 @@ media
   footer .footer-main .footer-logo .footer-logo-address {
     font-size: .625rem;
   }
+}
+
+@media screen and (max-width:490px) {
+  main .mainvisual .mainvisual-text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  main .mainvisual .mainvisual-text .pc-p {
+    font-size: 1.95rem;
+  }
+
+  main .mainvisual .mainvisual-text .sub-p {
+    font-size: 1.25rem;
+  }
+  
 }
