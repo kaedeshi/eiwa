@@ -151,22 +151,6 @@ header .header-menu .header-service::after {
   opacity: .6;
 }
 
-header .header-menu .header-contact {
-  position: relative;
-}
-
-header .header-menu .header-contact::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 32px;
-  background: #000;
-  opacity: .6;
-}
-
 header #hamburger {
   position: relative;
   display: none;
@@ -680,7 +664,7 @@ footer .footer-main .footer-menu::before {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 50%;
   height: 1px;
   background: #fff;
   opacity: .6;
@@ -732,22 +716,6 @@ footer .footer-main .footer-menu ul .footer-service::after {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 30px;
-  background: #fff;
-  opacity: .6;
-}
-
-footer .footer-main .footer-menu ul .footer-contact {
-  position: relative;
-}
-
-footer .footer-main .footer-menu ul .footer-contact::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
   transform: translateY(-50%);
   width: 1px;
   height: 30px;
@@ -972,7 +940,8 @@ media
   
   footer .footer-main .footer-menu ul li {
     margin-inline: auto;
-    width: calc(100% /2);
+    /* width: calc(100% /2); */
+    width: 100%;
   }
 
   footer .footer-main .footer-menu ul .footer-service::before {

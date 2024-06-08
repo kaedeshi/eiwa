@@ -150,22 +150,6 @@ header .header-menu .header-service::after {
   opacity: .6;
 }
 
-header .header-menu .header-contact {
-  position: relative;
-}
-
-header .header-menu .header-contact::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 32px;
-  background: #000;
-  opacity: .6;
-}
-
 header #hamburger {
   position: relative;
   display: none;
@@ -995,145 +979,6 @@ main .history .sp-history-text p+p {
 }
 
 /*=======================================================================
-recruit
-=======================================================================*/
-main .recruit {
-  position: relative;
-  padding: 110px 0 152px;
-}
-
-main .recruit .recruit-background {
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(217, 217, 217, .3);
-  z-index: -3;
-}
-
-main .recruit .recruit-title {
-  position: relative;
-  width: min(100% - 122px, 1120px);
-  margin-inline: auto;
-}
-
-main .recruit .recruit-title img {
-  position: absolute;
-  bottom: 0;
-  left: -42.5px;
-  z-index: -2;
-}
-
-main .recruit .recruit-title h2 {
-  font-family: "myfont1";
-  font-weight: bold;
-  font-size: 2rem;
-  text-shadow: 
-  1px 1px 0px #d9d9d94d,
-   -1px -1px 0px rgba(217, 217, 217, .3),
-  -1px 1px 0px rgba(217, 217, 217, .3),
-   1px -1px 0px rgba(217, 217, 217, .3),
-  1px 0px 0px rgba(217, 217, 217, .3), 
-  -1px 0px 0px rgba(217, 217, 217, .3),
-  0px 1px 0px rgba(217, 217, 217, .3), 
-  0px -1px 0px rgba(217, 217, 217, .3)
-  ;
-}
-
-main .recruit .recruit-title p {
-  margin-top: -4px;
-  font-family: "Playfair Display", serif;
-  text-shadow: 
-  1px 1px 1px #d9d9d94d,
-   -1px -1px 1px rgba(217, 217, 217, .3),
-  -1px 1px 1px rgba(217, 217, 217, .3),
-   1px -1px 1px rgba(217, 217, 217, .3),
-  1px 0px 1px rgba(217, 217, 217, .3), 
-  -1px 0px 1px rgba(217, 217, 217, .3),
-  0px 1px 1px rgba(217, 217, 217, .3), 
-  0px -1px 1px rgba(217, 217, 217, .3)
-  ;
-}
-
-main .recruit .recruit-content {
-  display: flex;
-  gap: 52px;
-  width: min(100% - 40px, 1120px);
-  margin-top: 32px;
-  margin-inline: auto;
-}
-
-main .recruit .recruit-content .recruit-text p {
-  font-family: "myfont2";
-  font-size: 1.25rem;
-  letter-spacing: 2px;
-}
-
-main .recruit .recruit-content>div {
-  width: calc((100% - 32px) / 2);
-}
-
-main .recruit .recruit-content .recruit-btn {
-  position: relative;
-  font-size: 1.125rem;
-  width: 240px;
-  margin-top: 78px;
-  color: #fff;
-  font-family: "myfont1";
-  background: #c85f48;
-  text-align: center;
-  cursor: pointer;
-  transition: transform .3s, opacity .3s;
-}
-
-main .recruit .recruit-content .recruit-btn::after {
-  content: '>';
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  color: #fff;
-}
-
-main .recruit .recruit-content .recruit-btn:hover {
-  opacity: .6;
-}
-
-main .recruit .recruit-content .recruit-btn:active {
-  opacity: .4;
-  transform: translate(2px, 2px);
-}
-
-main .recruit .recruit-content .recruit-btn a {
-  display: block;
-  width: 100%;
-  padding: 19px 0;
-}
-
-main .recruit .recruit-content .recruit-btn .recruit-btn-shadow {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 240px;
-  height: 57px;
-  border: 1px solid #c85f48;
-  transition: transform .3s;
-  pointer-events: none;
-}
-
-main .recruit .recruit-content .recruit-btn:active .recruit-btn-shadow {
-  transform: translate(-2px, -2px);
-}
-
-main .recruit .recruit-content .recruit-img {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform .6s, opacity .6s;
-}
-
-main .recruit .recruit-content .recruit-img img {
-  width: 100%;
-}
-
-/*=======================================================================
 contact
 =======================================================================*/
 main .contact {
@@ -1350,7 +1195,7 @@ footer .footer-main .footer-menu::before {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
+  width: 50%;
   height: 1px;
   background: #fff;
   opacity: .6;
@@ -1402,22 +1247,6 @@ footer .footer-main .footer-menu ul .footer-service::after {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 30px;
-  background: #fff;
-  opacity: .6;
-}
-
-footer .footer-main .footer-menu ul .footer-contact {
-  position: relative;
-}
-
-footer .footer-main .footer-menu ul .footer-contact::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
   transform: translateY(-50%);
   width: 1px;
   height: 30px;
@@ -1569,28 +1398,6 @@ media
 
   main .service .service-main .service-block .service-content .service-text {
     margin-top: 8px;
-  }
-
-  main .recruit .recruit-content {
-    flex-direction: column-reverse;
-  }
-
-  main .recruit .recruit-content>div {
-    width: 100%;
-  }
-
-  main .recruit .recruit-content {
-    gap: 0px;
-    margin-top: 24px;
-  }
-
-  main .recruit .recruit-content .recruit-text p {
-    margin-top: 8px;
-  }
-
-  main .recruit .recruit-content .recruit-btn {
-    margin-top: 24px;
-    margin-inline: auto;
   }
 
   main .contact .pc-contact {
@@ -1944,7 +1751,8 @@ media
   
   footer .footer-main .footer-menu ul li {
     margin-inline: auto;
-    width: calc(100% /2);
+    /* width: calc(100% /2); */
+    width: 100%;
   }
 
   footer .footer-main .footer-menu ul .footer-service::before {
