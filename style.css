@@ -1804,7 +1804,7 @@ media
   main .mainvisual .mainvisual-img2 {
     top: auto;
     bottom: 70px;
-    right: 6px;
+    right: -16px;
     width: 240px;
     height: 200px;
     clip-path: polygon(0 0,
@@ -1815,7 +1815,7 @@ media
   
   main .mainvisual .square2 {
     top: auto;
-    bottom: 70px;
+    bottom: 20px;
     right: -241px;
     width: 330px;
     height: 240px;
