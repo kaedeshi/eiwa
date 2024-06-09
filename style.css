@@ -1802,7 +1802,7 @@ media
   }
 
   main .mainvisual .mainvisual-img2 {
-    top: 0;
+    top: auto;
     bottom: 70px;
     right: 6px;
     width: 240px;
@@ -1814,7 +1814,7 @@ media
   }
   
   main .mainvisual .square2 {
-    top: 0;
+    top: auto;
     bottom: 70px;
     right: -241px;
     width: 330px;
