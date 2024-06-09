@@ -1820,4 +1820,12 @@ media
     width: 330px;
     height: 240px;
   }
+
+  main .about .about-main .about-block .about-content .about-text {
+    font-family: "myfont1";
+  }
+
+  main .service .service-main .service-block .service-content .service-text {
+    font-family: "myfont1";
+  }
 }
