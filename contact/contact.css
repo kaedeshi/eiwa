@@ -747,6 +747,52 @@ footer .footer-copy {
 }
 
 /*=======================================================================
+privacy
+=======================================================================*/
+main .privacy-contents {
+  font-size: .875rem;
+  font-family: "myfont1";
+  width: min(100% - 40px,1080px);
+  margin-inline: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  padding: 24px;
+}
+
+main .privacy-contents>div {
+  margin-top: 48px;
+}
+
+main .privacy-contents>div>div {
+  margin-top: 24px;
+}
+
+main .privacy-contents>div>div p,
+main .privacy-contents>div>p {
+  margin-top: 16px;
+}
+
+main .privacy-contents>div .right-text {
+  text-align: end;
+}
+
+main .close-btn {
+  display: flex;
+  justify-content: center;
+}
+
+main button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px;
+}
+
+main button:hover {
+  opacity: .7;
+}
+
+/*=======================================================================
 media
 =======================================================================*/
 @media screen and (max-width:900px) {
